@@ -1,0 +1,66 @@
+.bodyStyle {
+    font-family: Lexend;
+    background-color: lightgray;
+    background-image: url(./Assets/bg.jpg);
+    background-size: cover;
+}
+
+.intro {
+    border: 1px solid #bebebe;
+    border-width: 4px;
+    width: 580px;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(197, 196, 196, 0.3);
+    backdrop-filter: blur(10px);
+    font-size:larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewNormal {
+    cursor: pointer;
+    background-color: rgba(217, 217, 217, 0.412);
+    padding: 10px;
+    width: fit-content;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+.viewNormal:hover {
+    background-color: rgba(234, 234, 234, 0.549);
+    transform: scale(1.03);
+}
+
+.viewEnter {
+    cursor: pointer;
+    background-color: rgba(187, 187, 187, 0.25);
+    padding: 10px;
+    width: fit-content;
+    border-radius: 20px;
+    margin-top: -2px;
+}
+
+.viewEnter:hover {
+    background-color: rgba(206, 206, 206, 0.567);
+    transform: scale(1.03);  
+}
+
+.viewSource {
+    color: #121212; 
+    font-size: 14px;
+    margin-top: -4px;
+}
+
+.viewSource:hover {
+    color: black;
+    transform: scale(1.01);
+}
