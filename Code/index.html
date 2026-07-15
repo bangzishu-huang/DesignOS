@@ -4,24 +4,62 @@
     <head>
         <script type="module" src="./script.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css" />
+    
+        <!-- Google Font - Lexend -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     </head>
 
-    <!-- Google Font - Lexend -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
     <body class="bodyStyle">
 
         <!-- Intro Notification -->
-        <div class="intro">
+        <div id="intro" class="intro">
             <h1>DesignOS - The Portfolio</h1>
             <p>Hello, my name is Bangzishu (Benny) Huang and I'm an incoming freshmen at Washington University in St. Louis, double majoring in Design and Marketing. </p>
             <p>This is my portfolio. You can view it the quick way, or explore it the way I built it.</p>
             <p class="viewNormal">View Normal Portfolio</p>
-            <p class="viewEnter">Enter DesignOS</p>
+            <p class="viewEnter" id="closeintro">Enter DesignOS</p>
             <a href="https://github.com/bangzishu-huang/DesignOS" target="_blank" class="viewSource">View Source Code</a>
         </div>
+
+
+        <!-- Top Bar -->
+        <div class="topBar">
+            <p style="flex:1; text-align: left;">● Connected</p>
+            <p style="cursor: pointer; text-align: center;" id="openintro">DesignOS</p>
+            <p style="flex: 1; text-align: right;" id="timenow"></p>
+        </div>
         
+
+        <div class="bottomBar">
+
+            <div class="dockIcon">
+                <img src="./Assets/ui.svg" width="50" height="50" class="baseIcon"/>
+                <p style="margin-top: 4px">UX/UI</p>
+            </div>
+            
+            <div class="dockIcon">
+                <img src="./Assets/hardware.svg" width="50" height="50" class="baseIcon"/>
+                <p style="margin-top: 4px;">Hardware</p>
+            </div>
+            <div class="dockIcon">
+                <img src="./Assets/software.svg" width="50" height="50" class="baseIcon"/>
+                <p style="margin-top: 4px">Software</p>
+            </div>
+            
+            <div class="dockIcon">
+                <img src="./Assets/resume.svg" width="50" height="50" class="baseIcon"/>
+                <p style="margin-top: 4px;">Resume</p>
+            </div>
+                  
+            <div class="dockIcon">
+                <img src="./Assets/notes.svg" width="50" height="50" class="baseIcon"/>
+                <p style="margin-top: 4px;">Notes</p>
+            </div>
+
+        </div>
+
     </body>
 </html>

@@ -17,18 +17,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: rgba(197, 196, 196, 0.3);
-    backdrop-filter: blur(10px);
     font-size:larger;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(197, 196, 196, 0.3);
+    backdrop-filter: blur(2px);
 }
 
 .viewNormal {
     cursor: pointer;
-    background-color: rgba(217, 217, 217, 0.412);
+    background-color: rgba(217, 217, 217, 0.486);
     padding: 10px;
     width: fit-content;
     border-radius: 20px;
@@ -42,7 +42,7 @@
 
 .viewEnter {
     cursor: pointer;
-    background-color: rgba(187, 187, 187, 0.25);
+    background-color: rgba(187, 187, 187, 0.355);
     padding: 10px;
     width: fit-content;
     border-radius: 20px;
@@ -63,4 +63,53 @@
 .viewSource:hover {
     color: black;
     transform: scale(1.01);
+}
+
+.topBar {
+    display: flex;
+    background-color: rgba(176, 176, 176, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 0 30px;
+    color: #2B2B2B;
+}
+
+.bottomBar {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.19);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    color: #171717;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 0 20px;
+    align-items: center;
+    gap: 26px;
+}
+
+.bottomBar:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.baseIcon {
+    background: rgba(215, 215, 215, 0.45); 
+    padding: 5px; 
+    border-radius: 8px;
+}
+
+.dockIcon:hover {
+    transform: scale(1.07);
+}
+
+.dockIcon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    margin-top: 14px;
 }
