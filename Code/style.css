@@ -7,7 +7,7 @@
 
 .intro {
     border: 1px solid #bebebe;
-    border-width: 4px;
+    border-width: 2px;
     width: 580px;
     height: fit-content;
     border-radius: 10px;
@@ -22,8 +22,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(197, 196, 196, 0.3);
-    backdrop-filter: blur(2px);
+    background-color: rgba(197, 196, 196, 0.366);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
 
 .viewNormal {
@@ -112,4 +113,85 @@
     align-items: center;
     gap: 0px;
     margin-top: 14px;
+}
+
+.projectWindow {
+    display: flex;
+    flex-direction: column;
+    width: 1400px;
+    height: 800px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    position: absolute;
+    transform: translate(2%, -3%);
+}
+
+.projectTitleBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.682);
+    backdrop-filter: blur(15px);
+    cursor: move;
+}
+
+.projectBody {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.projectSidebar {
+    width: 170px;
+    height: 800px;
+    padding: 16px 12px;
+    background: rgba(255, 255, 255, 0.25);
+    border-right: 2px solid rgba(255, 255, 255, 0.134);
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+}
+
+.sidebarItem {
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px
+}
+
+.sidebarItem:hover {
+    background: rgba(255, 255, 255, 0.134)
+}
+
+.sidebarItem.active {
+    background: rgba(255, 255, 255, 0.4)
+}
+
+.projectContent {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.376);
+    backdrop-filter: blur(7px);
+}
+
+.projectControls {
+    display: flex;
+    align-items: center;
+}
+
+.closeButton {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff5f57;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.15s ease;
+}
+
+.closeButton:hover {
+    background-color: #e0443e;
 }
