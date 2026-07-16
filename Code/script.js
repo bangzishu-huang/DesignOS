@@ -44,13 +44,10 @@ const intro = document.getElementById("intro")
 const project1header = document.getElementById("project1header")
 const project2header = document.getElementById("project2header")
 const project3header = document.getElementById("project3header")
-const project4header = document.getElementById("project4header")
-const project5header = document.getElementById("project5header")
 
 const project1 = document.getElementById("project1")
 const project2 = document.getElementById("project2")
 const project3 = document.getElementById("project3")
-const project4 = document.getElementById("project4")
 
 
 const openintrobtn = document.querySelector("#openintro")
@@ -58,7 +55,6 @@ const closeintrobtn = document.querySelector("#closeintro")
 const openicon1 = document.querySelector("#icon1")
 const openicon2 = document.querySelector("#icon2")
 const openicon3 = document.querySelector("#icon3")
-const openicon4 = document.querySelector("#icon4")
 
 
 // setting display time
@@ -85,29 +81,41 @@ closeintrobtn.addEventListener("click", hideintro)
 
 // project windows
 function showicon1() {
+    project1.style.top = "50%";
+    project1.style.left = "50%";
     project1.style.display = "flex";
+    requestAnimationFrame(() => {
+      project1.classList.add("open");
+    })
 }
 openicon1.addEventListener("click", showicon1)
 
 function showicon2() {
+    project2.style.top = "50%";
+    project2.style.left = "50%";
     project2.style.display = "flex";
+    requestAnimationFrame(() => {
+      project2.classList.add("open");
+    })
 }
 openicon2.addEventListener("click", showicon2)
 
 function showicon3() {
+    project3.style.top = "50%";
+    project3.style.left = "50%";
     project3.style.display = "flex";
+    requestAnimationFrame(() => {
+      project3.classList.add("open");
+    })
 }
 openicon3.addEventListener("click", showicon3)
 
-function showicon4() {
-    project4.style.display = "flex";
-}
-openicon4.addEventListener("click", showicon4)
-
-
 document.querySelectorAll('.closeButton').forEach(btn => {
     btn.addEventListener('click', () => {
-        btn.closest('.projectWindow').style.display = 'none';
+      const win = btn.closest('.projectWindow');
+      win.classList.remove('open');
+      win.addEventListener('transitioned'), () => {
+      }, {once: true};
     })
 })
 
@@ -138,4 +146,3 @@ initialize(intro)
 initialize(project1)
 initialize(project2)
 initialize(project3)
-initialize(project4)
