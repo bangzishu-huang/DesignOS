@@ -15,7 +15,7 @@
     <body class="bodyStyle">
 
         <!-- Intro Notification -->
-        <div id="intro" class="intro">
+        <div id="intro" class="intro open">
             <h1>DesignOS - The Portfolio</h1>
             <p>Hello, my name is Bangzishu (Benny) Huang and I'm an incoming freshmen at Washington University in St. Louis, double majoring in Design and Marketing. </p>
             <p>This is my portfolio. You can view it the quick way, or explore it the way I built it.</p>
@@ -56,7 +56,7 @@
                 <p style="margin-top: 4px;">Resume</p>
             </div>
                   
-            <div class="dockIcon">
+            <div id="icon5" class="dockIcon">
                 <img src="./Assets/notes.svg" width="50" height="50" class="baseIcon"/>
                 <p style="margin-top: 4px;">Notes</p>
             </div>
@@ -74,12 +74,11 @@
             </div>
             <div class="projectBody">
                 <div class="projectSidebar">
-                    <div class="sidebarItem active">Project1</div>
-                    <div class="sidebarItem">Project2</div>
-                    <div class="sidebarItem">Project3</div>
+                    <div class="sidebarItem active" data-key="ui-1">Project1</div>
+                    <div class="sidebarItem" data-key="ui-2">Project2</div>
+                    <div class="sidebarItem" data-key="ui-3">Project3</div>
                 </div>
                 <div class="projectContent">
-                    <p>Testing hahaha</p>
                 </div>
             </div>
         </div>
@@ -95,12 +94,11 @@
             </div>
             <div class="projectBody">
                 <div class="projectSidebar">
-                    <div class="sidebarItem active">Project1</div>
-                    <div class="sidebarItem">Project2</div>
-                    <div class="sidebarItem">Project3</div>
+                    <div class="sidebarItem active" data-key="hardware-1">Project1</div>
+                    <div class="sidebarItem" data-key="hardware-2">Project2</div>
+                    <div class="sidebarItem" data-key="hardware-3">Project3</div>
                 </div>
                 <div class="projectContent">
-                    <p>Testing hahaha</p>
                 </div>
             </div>
         </div>
@@ -116,15 +114,45 @@
             </div>
             <div class="projectBody">
                 <div class="projectSidebar">
-                    <div class="sidebarItem active">Project1</div>
-                    <div class="sidebarItem">Project2</div>
-                    <div class="sidebarItem">Project3</div>
+                    <div class="sidebarItem active" data-key="software-1">Project1</div>
+                    <div class="sidebarItem" data-key="software-2">Project2</div>
+                    <div class="sidebarItem" data-key="software-3">Project3</div>
                 </div>
                 <div class="projectContent">
-                    <p>Testing hahaha</p>
                 </div>
             </div>
         </div>
         
+
+        <!-- Resume Window -->
+        <div id="resume" class="projectWindow" style="display: none;">
+            <div id="resumeheader" class="projectTitleBar">
+                <span class="projectTitle">Resume</span>
+                <div class="projectControls">
+                    <span class="closeButton"></span>
+                </div>
+            </div>
+            <div class="projectBody">
+                <iframe src="./Assets/resume.pdf#zoom=page-width" class="resumeView" title="Resume"></iframe>
+            </div>
+        </div>
+
+
+        <!-- Notes Window -->
+        <div id="notes" class="notesWindow" style="display: none;"> 
+            <div id="notesheader" class="projectTitleBar">
+                <span class="projectTitle">Notes</span>
+                <div class="projectControls">
+                    <span class="closeButton"></span>
+                </div>
+            </div>
+            <div class="projectBody">
+                <div class="notesContent">
+                    Test?
+                </div>
+            </div>
+        </div>
+
+
     </body>
 </html>
