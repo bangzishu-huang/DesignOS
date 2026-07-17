@@ -43,6 +43,8 @@
     width: fit-content;
     border-radius: 20px;
     margin-top: 5px;
+    transition: transform 0.14s ease;
+
 }
 
 .viewNormal:hover {
@@ -57,6 +59,7 @@
     width: fit-content;
     border-radius: 20px;
     margin-top: -2px;
+    transition: transform 0.14s ease;
 }
 
 .viewEnter:hover {
@@ -68,6 +71,7 @@
     color: #121212; 
     font-size: 14px;
     margin-top: -4px;
+    transition: transform 0.14s ease;
 }
 
 .viewSource:hover {
@@ -99,6 +103,7 @@
     padding: 0 20px;
     align-items: center;
     gap: 26px;
+    transition: transform 0.22s ease;
 }
 
 .bottomBar:hover {
@@ -122,6 +127,7 @@
     align-items: center;
     gap: 0px;
     margin-top: 14px;
+    transition: transform 0.16s ease;
 }
 
 .projectWindow {
@@ -249,9 +255,27 @@
 
 .notesContent {
     flex: 1;
-    padding: 24px;
+    padding: 30px;
     overflow-y: auto;
     overflow-x: hidden;
     background: rgba(255, 255, 255, 0.402);
     backdrop-filter: blur(8px);
+    font-size: 18px
+}
+
+.notesContact {
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    transition: transform 0.17s ease;
+}
+
+.notesContact:hover {
+    transform: scale(1.1)
+}
+
+.notesSocials {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px
 }

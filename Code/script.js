@@ -71,16 +71,19 @@ updateTime();
 setInterval(updateTime, 1000);
 
 
-// intro screen
-function showintro() {
-    intro.style.top = "50%"
-    intro.style.left = "50%"
-    intro.style.display = "flex";
-    requestAnimationFrame(() => {
-      intro.classList.add("open");
-    })
+// simple opening windows
+function openWindow(open) {
+  open.style.top = "50%"
+  open.style.left = "50%"
+  open.style.display = "flex";
+  handletap(open);
+  requestAnimationFrame(() => {
+    open.classList.add("open");
+  })
 }
 
+
+// intro screen
 function hideintro() {
   intro.classList.remove("open");
   intro.addEventListener("transitionend", () => {
@@ -88,61 +91,16 @@ function hideintro() {
   }, { once: true });
 }
 
-openintrobtn.addEventListener("click", showintro)
+openintrobtn.addEventListener("click", () => openWindow(intro))
 closeintrobtn.addEventListener("click", hideintro)
 
 
 // icon windows
-function showicon1() {
-    project1.style.top = "50%";
-    project1.style.left = "50%";
-    project1.style.display = "flex";
-    requestAnimationFrame(() => {
-      project1.classList.add("open");
-    })
-}
-openicon1.addEventListener("click", showicon1)
-
-function showicon2() {
-    project2.style.top = "50%";
-    project2.style.left = "50%";
-    project2.style.display = "flex";
-    requestAnimationFrame(() => {
-      project2.classList.add("open");
-    })
-}
-openicon2.addEventListener("click", showicon2)
-
-function showicon3() {
-    project3.style.top = "50%";
-    project3.style.left = "50%";
-    project3.style.display = "flex";
-    requestAnimationFrame(() => {
-      project3.classList.add("open");
-    })
-}
-openicon3.addEventListener("click", showicon3)
-
-function showicon4() {
-    resume.style.top = "50%";
-    resume.style.left = "50%";
-    resume.style.display = "flex";
-    requestAnimationFrame(() => {
-      resume.classList.add("open");
-    })
-}
-openicon4.addEventListener("click", showicon4)
-
-function showicon5() {
-    notes.style.top = "50%";
-    notes.style.left = "50%";
-    notes.style.display = "flex";
-    requestAnimationFrame(() => {
-      notes.classList.add("open");
-    })
-}
-openicon5.addEventListener("click", showicon5)
-
+openicon1.addEventListener("click", () => openWindow(project1))
+openicon2.addEventListener("click", () => openWindow(project2))
+openicon3.addEventListener("click", () => openWindow(project3))
+openicon4.addEventListener("click", () => openWindow(resume))
+openicon5.addEventListener("click", () => openWindow(notes))
 
 document.querySelectorAll('.closeButton').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -246,6 +204,8 @@ document.querySelectorAll('.projectWindow').forEach(win => {
   })
 })
 
+// not hardcoding email due to bot concerns
+document.getElementById("email").href = "mailto:" + "bangzishu" + "@" + "gmail.com"
 
 // windows orders
 var biggestZIndex = 1;
