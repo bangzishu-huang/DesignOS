@@ -77,6 +77,7 @@
                     <div class="sidebarItem active" data-key="ui-1">Project1</div>
                     <div class="sidebarItem" data-key="ui-2">Project2</div>
                     <div class="sidebarItem" data-key="ui-3">Project3</div>
+                    <div class="sidebarItem" data-key="ui-4">Project4</div>
                 </div>
                 <div class="projectContent">
                 </div>
@@ -94,9 +95,8 @@
             </div>
             <div class="projectBody">
                 <div class="projectSidebar">
-                    <div class="sidebarItem active" data-key="hardware-1">Project1</div>
-                    <div class="sidebarItem" data-key="hardware-2">Project2</div>
-                    <div class="sidebarItem" data-key="hardware-3">Project3</div>
+                    <div class="sidebarItem active" data-key="hardware-1">RobotDog</div>
+                    <div class="sidebarItem" data-key="hardware-2">RoboArm</div>
                 </div>
                 <div class="projectContent">
                 </div>
@@ -116,7 +116,6 @@
                 <div class="projectSidebar">
                     <div class="sidebarItem active" data-key="software-1">Project1</div>
                     <div class="sidebarItem" data-key="software-2">Project2</div>
-                    <div class="sidebarItem" data-key="software-3">Project3</div>
                 </div>
                 <div class="projectContent">
                 </div>
@@ -165,7 +164,88 @@
                 </div>
             </div>
         </div>
+    
+
+        <!-- UI/UX Projects -->
+        <template id= "ui-1">
+            <h1>UI/UX Project 1</h1>
+            <p>Project 1 stuff over here (Placeholder till college)</p>
+        </template>
+
+        <template id= "ui-2">
+            <h1>UI/UX Project 2</h1>
+            <p>Project 2 stuff over here (Placeholder till college)</p>
+        </template>
+
+        <template id= "ui-3">
+            <h1>UI/UX Project 3</h1>
+            <p>Project 3 stuff over here (Placeholder till college)</p>
+        </template>
+
+        <template id= "ui-4">
+            <h1>UI/UX Project 4</h1>
+            <p>Project 4 stuff over here (Placeholder till college)</p>
+        </template>
 
 
+        <!-- Hardware Projects -->
+        <template id= "hardware-1">
+            <h1>Connection Executor 9600X (RobotDog)</h1>
+            <i class="projectLiner">A 9-servo robot dog that can roam around autonomously, utilizing an ultrasonic sensor to avoid obstacles.</i>
+            <div class="projectRow">
+                <img src="./Assets/Hardware1/final1.jpeg" class="projectPhoto">
+                <img src="./Assets/Hardware1/final2.jpeg" class="projectPhoto">
+            </div>
+            <div class="projectDesc">
+                <p>This was a project built for a 4 day hardware hackathon called "Stasis". It features a robotdog that uses 8 servo motors and inverse kinematics in order to replicate 4-legged movement. Another servo motor is attached to an ultrasonic sensor to act as the head for the robodog and detect incoming obstacles. A light switch (for the special ingredient) is present in the back of the robot to act as a quick on/off switch. There are 2 seperate modes for the robot dog, one that you can manually control movement through the console, and another one where the robot dog will walk autonomously.</p>
+                <p>My team and I thought of making this robot dog because we wanted to challenge our own skills, while venturing into the "still-new" field of robotics for us. For an unique twist we attached a flag to the back of the robot dog that featured our socials, so it can roam around the venue and attract attention from fellow participants.</p>
+                <p>Majority of the time I worked on creating the 3D printed frames for our robot dog, as well as wiring all the components up while retaining wire management. I also took part in coding the inverse kinematics for both modes of the robot dog. I learned to apply continous iterations to the custom designed robot dog frame and make tradeoffs between "ideal" building decisions compared to most realistic ones due to the time constraint given.</p>
+            </div>
+            <h3 style="margin-bottom: -8px;">Materials Used</h3>
+            <ul>
+                <li>Servo Motors</li>
+                <li>ESP-32</li>
+                <li>Ultrasonic Sensor</li>
+                <li>Servo Driver (16 Channel)</li>
+                <li>5V Portable Battery</li>
+                <li>8 Ohms Circular Speaker</li>
+                <li>Audio Amplifier Board</li>
+                <li>Jumper Wires</li>
+                <li>Light Switch</li>
+            </ul>
+            <h3 style="margin-bottom: -5px;">Progress Photos</h3>
+            <div class="projectRow">
+                <img src="./Assets/Hardware1/1.jpeg" class="projectProgress" style="object-position: center -380px;">
+                <img src="./Assets/Hardware1/2.jpeg" class="projectProgress" style="object-position: center -450px; scale: 0.95;">
+            </div>
+            <div class="projectRow">
+                <img src="./Assets/Hardware1/3.jpeg" class="projectProgress" style="object-position: 0px -200px;">
+                <img src="./Assets/Hardware1/4.jpeg" class="projectProgress" style="object-position: center -160px;">
+            </div>
+            <a href="https://github.com/bangzishu-huang/Connection-Executor-9600X" target="_blank" class="githubButton">
+                <img src="./Assets/github.svg" width="30" height="30">
+                <span>View More Details in GitHub</span>
+            </a>
+
+
+        </template>
+
+        <template id= "hardware-2">
+            <h1>RoboArm</h1>
+            <p>Project 2 stuff over here (Placeholder till college)</p>
+        </template>
+
+
+        <!-- Software Projects -->
+        <template id= "software-1">
+            <h1>Software Project 1</h1>
+            <p>Project 1 stuff over here (Placeholder till college)</p>
+        </template>
+
+        <template id= "software-2">
+            <h1>Software Project 2</h1>
+            <p>Project 2 stuff over here (Placeholder till college)</p>
+        </template>
+        
     </body>
 </html>

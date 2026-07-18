@@ -124,85 +124,32 @@ document.querySelectorAll('.closeButton').forEach(btn => {
 
 
 // project sidebar functions
-const projectData = {
-
-  // ui projects
- "ui-1": {
-    title: "UI/XI Project 1",
-    desc: "<p>Project 1 stuff over here</p>"
-  }, 
-
- "ui-2": {
-    title: "UI/XI Project 2",
-    desc: "<p>Project 2 stuff over here</p>"
-  },
-
- "ui-3": {
-    title: "UI/XI Project 3",
-    desc: "<p>Project 3 stuff over here</p>"
-  },
-
-  // hardware projects
- "hardware-1": {
-    title: "Hardware Project 1",
-    desc: "<p>Project 1 stuff over here</p>"
-  }, 
-
- "hardware-2": {
-    title: "Hardware Project 2",
-    desc: "<p>Project 2 stuff over here</p>"
-  },
-
- "hardware-3": {
-    title: "Hardware Project 3",
-    desc: "<p>Project 3 stuff over here</p>"
-  },
-
-
-  // software projects
- "software-1": {
-    title: "Software Project 1",
-    desc: "<p>Project 1 stuff over here</p>"
-  }, 
-
- "software-2": {
-    title: "Software Project 2",
-    desc: "<p>Project 2 stuff over here</p>"
-  },
-
- "software-3": {
-    title: "Software Project 3",
-    desc: "<p>Project 3 stuff over here</p>"
-  },
-
-}
-
-
 document.querySelectorAll('.projectWindow').forEach(win => {
   const sidebarItems = win.querySelectorAll('.sidebarItem');
   const content = win.querySelector('.projectContent');
-  const firstProject = win.querySelector('.sidebarItem.active') || sidebarItems[0];
+  const firstItem = win.querySelector('.sidebarItem.active') || sidebarItems[0];
 
-  // loading first content
-  if (firstProject) {
-    const data = projectData[firstProject.dataset.key];
-    if (data) {
-      content.innerHTML = `<h2>${data.title}</h2>${data.desc}`;
+  // loading project stuff 
+  function loadProject(item) {
+    const template = document.getElementById(item.dataset.key);
+    if (template) {
+      content.innerHTML = '';
+      content.appendChild(template.content.cloneNode(true));
     }
   }
+
+  // loading first content
+  if (firstItem) loadProject(firstItem);
 
   sidebarItems.forEach(item => {
     item.addEventListener('click', () => {
       sidebarItems.forEach(i => i.classList.remove('active'));
       item.classList.add('active');
-
-      const data = projectData[item.dataset.key];
-      if (data) {
-        content.innerHTML = `<h2>${data.title}</h2>${data.desc}`;
-      }
+      loadProject(item)
     })
   })
 })
+
 
 // not hardcoding email due to bot concerns
 document.getElementById("email").href = "mailto:" + "bangzishu" + "@" + "gmail.com"
