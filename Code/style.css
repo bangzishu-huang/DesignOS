@@ -120,6 +120,12 @@
     transition: 0.1s ease;
 }
 
+.baseIcon.active {
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 2px;
+    background: rgba(215, 215, 215, 0.6)
+}
+
 .dockIcon:hover {
     transform: scale(1.07);
 }
@@ -303,6 +309,15 @@
 .projectPhoto {
     width: 50%;
     height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.projectPhotoS1 {
+    width: 50%;
+    height: 300px;
     object-fit: cover;
     border-radius: 8px;
     margin-top: 15px;

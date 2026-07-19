@@ -60,6 +60,7 @@ const openicon2 = document.querySelector("#icon2")
 const openicon3 = document.querySelector("#icon3")
 const openicon4 = document.querySelector("#icon4")
 const openicon5 = document.querySelector("#icon5")
+const allicons = document.querySelectorAll('.dockIcon .baseIcon')
 
 
 // setting display time
@@ -96,32 +97,53 @@ closeintrobtn.addEventListener("click", hideintro)
 
 
 // icon windows
-openicon1.addEventListener("click", () => openWindow(project1))
-openicon2.addEventListener("click", () => openWindow(project2))
-openicon3.addEventListener("click", () => openWindow(project3))
-openicon4.addEventListener("click", () => openWindow(resume))
-openicon5.addEventListener("click", () => openWindow(notes))
+openicon1.addEventListener("click", () => {
+  openWindow(project1);
+  setActiveIcon(windowicon.project1);
+})
+openicon2.addEventListener("click", () => {
+  openWindow(project2);
+  setActiveIcon(windowicon.project2)
+})
+openicon3.addEventListener("click", () => {
+  openWindow(project3);
+  setActiveIcon(windowicon.project3)
+})
+openicon4.addEventListener("click", () => {
+  openWindow(resume);
+  setActiveIcon(windowicon.resume)
+})
+openicon5.addEventListener("click", () => {
+  openWindow(notes);
+  setActiveIcon(windowicon.notes)
+})
 
 document.querySelectorAll('.closeButton').forEach(btn => {
     btn.addEventListener('click', () => {
-      const win = btn.closest('.projectWindow');
+      const win = btn.closest('.projectWindow') || btn.closest('.notesWindow');
+      if (!win) return;
       win.classList.remove('open');
       win.addEventListener('transitionend', () => {
         win.style.display = 'none'
       }, {once: true});
+
+      const iconunset = windowicon[win.id];
+      if (iconunset) iconunset.classList.remove('active')
     })
 })
 
-document.querySelectorAll('.closeButton').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const wnn = btn.closest('.notesWindow');
-      wnn.classList.remove('open');
-      wnn.addEventListener('transitionend', () => {
-        wnn.style.display = 'none'
-      }, {once: true});
-    })
-})
+// window -> icon mapping
+function setActiveIcon(iconE1) {
+  if (iconE1) iconE1.classList.add('active');
+}
 
+const windowicon = {
+  project1: openicon1.querySelector('.baseIcon'),
+  project2: openicon2.querySelector('.baseIcon'),
+  project3: openicon3.querySelector('.baseIcon'),
+  resume: resume ? openicon4.querySelector('.baseIcon') : null,
+  notes: openicon5.querySelector('.baseIcon')
+}
 
 // project sidebar functions
 document.querySelectorAll('.projectWindow').forEach(win => {
