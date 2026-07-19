@@ -106,9 +106,9 @@ document.querySelectorAll('.closeButton').forEach(btn => {
     btn.addEventListener('click', () => {
       const win = btn.closest('.projectWindow');
       win.classList.remove('open');
-      win.addEventListener('transitionend'), () => {
+      win.addEventListener('transitionend', () => {
         win.style.display = 'none'
-      }, {once: true};
+      }, {once: true});
     })
 })
 
@@ -116,9 +116,9 @@ document.querySelectorAll('.closeButton').forEach(btn => {
     btn.addEventListener('click', () => {
       const wnn = btn.closest('.notesWindow');
       wnn.classList.remove('open');
-      wnn.addEventListener('transitionend'), () => {
+      wnn.addEventListener('transitionend', () => {
         wnn.style.display = 'none'
-      }, {once: true};
+      }, {once: true});
     })
 })
 
@@ -127,16 +127,24 @@ document.querySelectorAll('.closeButton').forEach(btn => {
 document.querySelectorAll('.projectWindow').forEach(win => {
   const sidebarItems = win.querySelectorAll('.sidebarItem');
   const content = win.querySelector('.projectContent');
+  const contentinner = win.querySelector('.projectContentInner')
   const firstItem = win.querySelector('.sidebarItem.active') || sidebarItems[0];
 
   // loading project stuff 
   function loadProject(item) {
     const template = document.getElementById(item.dataset.key);
-    if (template) {
-      content.innerHTML = '';
-      content.appendChild(template.content.cloneNode(true));
-    }
+    if (!template) return;
+
+    contentinner.classList.add('fading');
+    
+    setTimeout(() => {
+      contentinner.innerHTML = '';
+      contentinner.appendChild(template.content.cloneNode(true));
+      content.scrollTop = 0;
+      contentinner.classList.remove('fading');
+    }, 130);
   }
+ 
 
   // loading first content
   if (firstItem) loadProject(firstItem);
@@ -145,7 +153,7 @@ document.querySelectorAll('.projectWindow').forEach(win => {
     item.addEventListener('click', () => {
       sidebarItems.forEach(i => i.classList.remove('active'));
       item.classList.add('active');
-      loadProject(item)
+      loadProject(item);
     })
   })
 })

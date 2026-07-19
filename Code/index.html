@@ -80,6 +80,7 @@
                     <div class="sidebarItem" data-key="ui-4">Project4</div>
                 </div>
                 <div class="projectContent">
+                    <div class="projectContentInner"></div>
                 </div>
             </div>
         </div>
@@ -99,6 +100,7 @@
                     <div class="sidebarItem" data-key="hardware-2">RoboArm</div>
                 </div>
                 <div class="projectContent">
+                    <div class="projectContentInner"></div>
                 </div>
             </div>
         </div>
@@ -118,6 +120,7 @@
                     <div class="sidebarItem" data-key="software-2">Project2</div>
                 </div>
                 <div class="projectContent">
+                    <div class="projectContentInner"></div>
                 </div>
             </div>
         </div>
@@ -226,13 +229,31 @@
                 <img src="./Assets/github.svg" width="30" height="30">
                 <span>View More Details in GitHub</span>
             </a>
-
-
         </template>
 
         <template id= "hardware-2">
             <h1>RoboArm</h1>
-            <p>Project 2 stuff over here (Placeholder till college)</p>
+            <i class="projectLiner">A 2 jointed robot arm that is able to be controlled wireless through a smartphone.</i>
+            <div class="projectRow">
+                <img src="./Assets/Hardware2/final1.jpeg" class="projectPhotoRB" style="object-position: center -130px;">
+                <img src="./Assets/Hardware2/final2.jpeg" class="projectPhotoRB" style="object-position: center -90px;">
+            </div>
+            <div class="projectDesc">
+                <p>RoboArm is a robotic arm that has 2 movable joints, a base that is capable of horizonntal movement, and a gripper that's able to open and close. The design for RoboArm, including the gears, are all custom made and 3D printed by me on AutoDesk Inventor. There are small cuts and indents in order to help with wiring space throughout the design.</p>
+                <p>This was one of the first robotics projects that I did completely on my own without the assistance of anyone else. It was pretty challenging trying to make gears from scratch and ensure all the tolerances would function as intended. It took a lot of trial-and-error especially since each 3D print would come out a little different. </p>
+                <p>Throughout this project I learned how to design specifically for manufacturing tolerance because it was completely different then the tolerance shown in the 3D model application. Additionally, I experience what it felt to build alone, having only myself to rely on even during rough times when let's say the servo motor movement wasn't as intended. It taught me a lot about resilience and grit, just pushing through with the final goal in mind.</p>
+                <p></p>
+            </div>
+            <h3 style="margin-bottom: -8px;">Materials Used</h3>
+            <ul>
+                <li>Servo Motors SG90</li>
+                <li>Ball Bearings</li>
+                <li>ESP-32</li>
+                <li>AA Batteries</li>
+                <li>4 AA Battery Holder</li>
+                <li>Jumper Wires</li>
+                <li>DC Barrel Jack to Screen Adapter</li>
+            </ul>
         </template>
 
 

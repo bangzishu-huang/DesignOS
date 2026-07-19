@@ -3,6 +3,7 @@
     background-color: lightgray;
     background-image: url(./Assets/bg.jpg);
     background-size: cover;
+    height: 100vh
 }
 
 .intro {
@@ -204,8 +205,18 @@
     padding: 24px;
     overflow-y: auto;
     overflow-x: hidden;
-    background: rgba(255, 255, 255, 0.376);
+    background: rgba(255, 255, 255, 0.348);
     backdrop-filter: blur(7px);
+    transition: opacity 0.15s ease;
+}
+
+.projectContentInner {
+    transition: opacity 0.13s ease, transform 0.13s ease;
+}
+
+.projectContentInner.fading {
+    opacity: 0.15;
+    transform: translateY(6px);
 }
 
 .projectControls {
@@ -297,6 +308,16 @@
     margin-top: 15px;
     margin-bottom: 8px;
 }
+
+.projectPhotoRB {
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
 
 .projectDesc {
     display: block;
