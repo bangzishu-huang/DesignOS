@@ -14,18 +14,54 @@
     <body class="bodyStyle">
 
         <!-- Navigation Bar -->
-        <nav class="topNav">
-            <div class="navTab">
-                <span class="navTab active" data-tab="projects">Projects</span>
-                <span class="navTab" data-tab="about">About</span>
-                <a href="index.html" class="navTab">DesignOS</a>
+        <nav id="topNav" class="topNav">
+
+            <!-- Name for Branding -->
+            <div class="navIn">
+                <span class="navName" data-tab="projects">Bangzishu Huang</span>
+
+            <!-- Top Bar Tabs -->
+                <div class="navTabsss">
+                    <span class="navTab active" data-tab="projects">Projects</span>
+                    <span class="navTab" data-tab="about">About</span>
+                    <a href="index.html" class="navTab exit">
+                        <span class="exitText">To DesignOS</span>
+                        <span class="exitArrow">⮐</span>
+                    </a>
+                </div>
             </div>
         </nav>
 
         <main>
+            <section class="heroIntro">
+                <div class="heroLine fadeUp">
+                    <h1 style="font-size: 100px; margin-bottom: 0; margin-top: 400px;">Hi, I'm Bangzishu.</h1>
+                    <h3 style="font-size: 25px; margin-top: 12px; color: rgba(255,255,255,0.8)">(You can call me Benny for short)</h3>
+                </div>
+
+                <div class="heroLine fadeSolo" id="designBuild">
+                    <p style="font-size: 40px; margin-top: 100px; margin-bottom: 0;">I design and build things—</p>
+                </div>
+
+                <div class="heroLine fadeSolo" id="servos">
+                    <p style="font-size: 40px; margin-bottom: 20px;">sometimes on screens, sometimes with servos.</p>
+                </div>
+
+                <div class="heroArrow" id="arrow">
+                    <div class="heroCTA">
+                        <p style="font-size: 24px; margin-bottom: 6px; color: rgba(255,255,255,0.8);">See some of my works below</p>
+                    </div>
+                    <svg class="arrow" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </div>
+
+            <div id="heroEnd" style="height: 1px;"></div>
+            </section>
+
             <section id="projects" class="tabSection active">
                 <!-- Project Grid -->
-                <p> hey</p>
+                <h1>Projects</h1>
             </section>
 
             <section id="about" class="tabSection">

@@ -1,31 +1,212 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 .bodyStyle{
     font-family: Lexend;
 }
 
 .topNav {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     transform: translateY(0);
-    transition: transform 0.25 ease;
+    transition: transform 0.25s ease, background-color 0.3s ease;
     z-index: 100;
+    padding: 22px;
+    box-sizing: border-box;
+}
+
+.topNav.scrolled {
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .topNav.hidden {
     transform: translateY(-100%);
 }
 
+.navTabsss {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+    width:100%;
+}
+
 .navTab {
+    position: relative;;
     text-decoration: none;
     color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    padding-bottom: 2px;
+}
+
+.navTab::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.23s ease;
+}
+
+.navTab.active::after {
+    transform: scaleX(1);
+}
+
+.navTab:hover::after {
+    transform: scaleX(1);
+}
+
+.exit {
+    display: inline-flex;
+    align-items: center;
+}
+
+.exitText {
+    display: inline-block;
+    transition: transform 0.23s ease;
+}
+
+.exitArrow {
+    display: inline-block;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateX(-8px);
+    margin-left: 0;
+    position: relative;
+    top: -6px;
+    transition: opacity 0.25s ease, transform 0.25s ease, margin-left 0.25s ease;
+}
+
+.exit:hover .exitText {
+    transform: translateX(-4px)
+}
+
+.exit:hover .exitArrow {
+    opacity: 1;
+    transform: translateX(0);
+    margin-left: 2px;
+}
+
+.navIn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navName {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    white-space: nowrap;
 }
 
 .tabSection {
     display: none;
-    padding: 40px
+    padding: 40px;
+    height: 800px
 }
 
 .tabSection.active {
     display: block;
+}
+
+.heroIntro {
+    position: relative;
+    height: 135vh;
+    background: 
+        linear-gradient(to bottom, rgb(255,255,255,0) 0%, rgba(255,255,255,0) 90%, white 100%),
+        url('./Assets/bg.jpg');
+    /* blur image? */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+}
+
+.fadeUp, .fadeSolo {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:  opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fadeUp.visible, .fadeSolo.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.heroArrow {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+.heroArrow.fade {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.heroArrow.locked {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow {
+    animation: bob 2s ease-in-out infinite;
+}
+
+@keyframes bob {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(8px);}
+}
+
+.heroCTA {
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    text-align: center;
+}
+
+.heroCTA.expanded {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+#heroEnd {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+}
+
+#projects {
+    background: white
 }
