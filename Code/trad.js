@@ -10,6 +10,7 @@ const navTabs = document.querySelectorAll('.navTab')
 const tabSections = document.querySelectorAll('.tabSection')
 const heroCTA = document.querySelector('.heroCTA')
 const heroArrow = document.querySelector('.heroArrow')
+const heroIntro = document.querySelector('.heroIntro')
 
 // matching top bar tabs
 navTabs.forEach(tab => {
@@ -18,6 +19,14 @@ navTabs.forEach(tab => {
         tabSections.forEach(s => s.classList.remove('active'));
         tab.classList.add('active');
         document.getElementById(tab.dataset.tab).classList.add('active');
+
+        // getting rid of the hero section for about
+        if (tab.dataset.tab === 'about') {
+            heroIntro.style.display = 'none'
+        } else {
+            heroIntro.style.display = 'flex'
+        }
+
         window.scrollTo({top: 0, behavior: 'instant'})
     })
 })
@@ -128,3 +137,14 @@ function checkArrowLocked() {
 
 window.addEventListener('scroll', checkArrowLocked)
 checkArrowLocked()
+
+// about page
+window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash === '#about') {
+        navTabs.forEach(t => t.classList.remove('active'))
+        tabSections.forEach(s => s.classList.remove('active'))
+        document.querySelector('.navTab[data-tab="about"]').classList.add('active')
+        document.getElementById('about').classList.add("active")
+        document.querySelector('.heroIntro').style.display = 'none'
+    }
+})

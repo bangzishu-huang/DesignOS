@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="module" src="./project.js"></script>
+        <link rel="stylesheet" type="text/css" href="trad.css" />
+    
+        <!-- Google Font - Lexend -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body class="bodyStyle">
+
+        <!-- Navigation Bar (retaining from main page)-->
+        <nav id="topNav" class="topNav">
+
+            <!-- Name for Branding -->
+            <div class="navIn">
+                <span class="navName" data-tab="projects">Bangzishu Huang</span>
+
+            <!-- Top Bar Tabs -->
+                <div class="navTabsss">
+                    <a href="trad.html" class="navTab">Projects</a>
+                    <a href="trad.html#about" class="navTab">About</a>
+                    <a href="index.html" class="navTab exit">
+                        <span class="exitText">To DesignOS</span>
+                        <span class="exitArrow">⮐</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="projectDetail">
+            <div id="projectDetailContent"></div>
+        </main>
+
+        <!-- UI/UX Projects -->
+        <template id= "ui-1">
+            <h1>UI/UX Project 1</h1>
+            <p>Project 1 stuff over here (Placeholder till college)</p>
+        </template>
+
+        <template id= "ui-2">
+            <h1>UI/UX Project 2</h1>
+            <p>Project 2 stuff over here (Placeholder till college)</p>
+        </template>
+
+        <template id= "ui-3">
+            <h1>UI/UX Project 3</h1>
+            <p>Project 3 stuff over here (Placeholder till college)</p>
+        </template>
+
+        <template id= "ui-4">
+            <h1>UI/UX Project 4</h1>
+            <p>Project 4 stuff over here (Placeholder till college)</p>
+        </template>
+
+
+        <!-- Hardware Projects -->
+        <template id= "hardware-1">
+            <h1>Connection Executor 9600X (RobotDog)</h1>
+            <i class="projectLiner">A 9-servo robot dog that can roam around autonomously, utilizing an ultrasonic sensor to avoid obstacles.</i>
+            <div class="projectRow">
+                <img src="./Assets/Hardware1/final1.jpeg" class="projectPhoto">
+                <img src="./Assets/Hardware1/final2.jpeg" class="projectPhoto">
+            </div>
+            <div class="projectDesc">
+                <p>This was a project built for a 4 day hardware hackathon called "Stasis". It features a robotdog that uses 8 servo motors and inverse kinematics in order to replicate 4-legged movement. Another servo motor is attached to an ultrasonic sensor to act as the head for the robodog and detect incoming obstacles. A light switch (for the special ingredient) is present in the back of the robot to act as a quick on/off switch. There are 2 seperate modes for the robot dog, one that you can manually control movement through the console, and another one where the robot dog will walk autonomously.</p>
+                <p>My team and I thought of making this robot dog because we wanted to challenge our own skills, while venturing into the "still-new" field of robotics for us. For an unique twist we attached a flag to the back of the robot dog that featured our socials, so it can roam around the venue and attract attention from fellow participants.</p>
+                <p>Majority of the time I worked on creating the 3D printed frames for our robot dog, as well as wiring all the components up while retaining wire management. I also took part in coding the inverse kinematics for both modes of the robot dog. I learned to apply continous iterations to the custom designed robot dog frame and make tradeoffs between "ideal" building decisions compared to most realistic ones due to the time constraint given.</p>
+            </div>
+            <h3 style="margin-bottom: -8px;">Materials Used</h3>
+            <ul>
+                <li>Servo Motors</li>
+                <li>ESP-32</li>
+                <li>Ultrasonic Sensor</li>
+                <li>Servo Driver (16 Channel)</li>
+                <li>5V Portable Battery</li>
+                <li>8 Ohms Circular Speaker</li>
+                <li>Audio Amplifier Board</li>
+                <li>Jumper Wires</li>
+                <li>Light Switch</li>
+            </ul>
+            <h3 style="margin-bottom: -5px;">Progress Photos</h3>
+            <div class="projectRow">
+                <img src="./Assets/Hardware1/1.jpeg" class="projectProgress" style="object-position: center -380px;">
+                <img src="./Assets/Hardware1/2.jpeg" class="projectProgress" style="object-position: center -450px;">
+            </div>
+            <div class="projectRow">
+                <img src="./Assets/Hardware1/3.jpeg" class="projectProgress" style="object-position: 0px -200px;">
+                <img src="./Assets/Hardware1/4.jpeg" class="projectProgress" style="object-position: center -160px;">
+            </div>
+            <a href="https://github.com/bangzishu-huang/Connection-Executor-9600X" target="_blank" class="githubButton">
+                <img src="./Assets/github.svg" width="30" height="30">
+                <span>View More Details in GitHub</span>
+            </a>
+        </template>
+
+
+        <template id= "hardware-2">
+            <h1>RoboArm</h1>
+            <i class="projectLiner">A 2 jointed robot arm that is able to be controlled wireless through a smartphone.</i>
+            <div class="projectRow">
+                <img src="./Assets/Hardware2/final1.jpeg" class="projectPhotoRB" style="object-position: center -130px;">
+                <img src="./Assets/Hardware2/final2.jpeg" class="projectPhotoRB" style="object-position: center -90px;">
+            </div>
+            <div class="projectDesc">
+                <p>RoboArm is a robotic arm that has 2 movable joints, a base that is capable of horizonntal movement, and a gripper that's able to open and close. The design for RoboArm, including the gears, are all custom made and 3D printed by me on AutoDesk Inventor. There are small cuts and indents in order to help with wiring space throughout the design.</p>
+                <p>This was one of the first robotics projects that I did completely on my own without the assistance of anyone else. It was pretty challenging trying to make gears from scratch and ensure all the tolerances would function as intended. It took a lot of trial-and-error especially since each 3D print would come out a little different. </p>
+                <p>Throughout this project I learned how to design specifically for manufacturing tolerance because it was completely different then the tolerance shown in the 3D model application. Additionally, I experience what it felt to build alone, having only myself to rely on even during rough times when let's say the servo motor movement wasn't as intended. It taught me a lot about resilience and grit, just pushing through with the final goal in mind.</p>
+                <p></p>
+            </div>
+            <h3 style="margin-bottom: -8px;">Materials Used</h3>
+            <ul>
+                <li>Servo Motors SG90</li>
+                <li>Ball Bearings</li>
+                <li>ESP-32</li>
+                <li>AA Batteries</li>
+                <li>4 AA Battery Holder</li>
+                <li>Jumper Wires</li>
+                <li>DC Barrel Jack to Screen Adapter</li>
+            </ul>
+            <h3 style="margin-bottom: -5px;">Progress Photos</h3>
+            <div class="projectRow">
+                <img src="./Assets/Hardware2/1.jpeg" class="projectProgress" style="object-position: -100px center;">
+                <img src="./Assets/Hardware2/2.jpeg" class="projectProgress">
+            </div>
+            <div class="projectRow">
+                <img src="./Assets/Hardware2/3.jpeg" class="projectProgress">
+                <img src="./Assets/Hardware2/4.jpeg" class="projectProgress">
+            </div>
+            <a href="https://github.com/bangzishu-huang/Roboarm" target="_blank" class="githubButton">
+                <img src="./Assets/github.svg" width="30" height="30">
+                <span>View More Details in GitHub</span>
+            </a>
+        </template>
+
+
+        <!-- Software Projects -->
+        <template id= "software-1">
+            <h1>DesignOS</h1>
+            <i class="oneLiner">Custom-coded portfolio with the intent of functioning as a desktop OS right on any web browser</i>
+            <div class="projectRow">
+                <img src="./Assets/Software1/final1.png" class="projectPhotoS1">
+                <!-- Bottom is placeholder until i finish traditional portfolio -->
+                <img src="./Assets/placeholder.png" class="projectPhotoS1"> 
+            </div>
+            <div class="projectDesc">
+                <p>I originally thought of the idea to build DesignOS because I realized how majority of the portfolio sites are all generated from generic website builders. In a world of talented designers, I wanted to make a portfolio that would leave a lasting impression on everyone who came across it. So, here I am building DesignOS, and if you're reading up to here you have gotten a grasp on what DesignOS is. It essentially acts as an operating system functioning on any web browser with the "apps" displaying a variety of my projects and things about me.</p>
+                <p>In order for the entire interface to feel like an actual OS, I made sure to add Z-Indexing, which is basically organizing windows into specific layers (so the most recently clicked window is at the very top). Also, I implemented a bunch of mini animations when your cursor is hovered to give off a very minimalistic but sleek feel. There are a lot of subtle transition details I added that would make the entire OS experience feel more premium.</p>
+                <p>When I first started this project I was still pretty new to JavaScript and HTML, so through creating DesignOS I also became more effecient with the languages. It also taught me to think outside the box for a lot of problems, especially since I created this portfolio because I wanted to somehow differentiate myself. I enjoyed working on DesignOS, since I was able to express myself through this OS through all the elements and projects which I truly enjoy making.</p>
+            </div>
+            <h3 style="margin-bottom: -8px;">Tech Slack</h3>
+            <ul>
+                <li>Frontend: JavaScript, HTML, CSS</li>
+                <li>Hosting: GitHub Pages</li>
+                <li>Version Control: GitHub</li>
+                <li>Development Tools: Visual Studio Code, Live Server Extension</li>
+            </ul>
+            <h3 style="margin-bottom: -5px;">Progress Photos</h3>
+            <div class="projectRow">
+                <img src="./Assets/Software1/1.png" class="projectProgress">
+                <img src="./Assets/Software1/2.png" class="projectProgress">
+            </div>
+            <div class="projectRow">
+                <img src="./Assets/Software1/3.png" class="projectProgress">
+                <!-- Below is placeholder for a ss of traditional portfolio progress -->
+                <img src="./Assets/placeholder.png" class="projectProgress">
+            </div>
+            <a href="https://github.com/bangzishu-huang/DesignOS" target="_blank" class="githubButton">
+                <img src="./Assets/github.svg" width="30" height="30">
+                <span>View More Details in GitHub</span>
+            </a>
+        </template>
+
+        <template id= "software-2">
+            <h1>Software Project 2</h1>
+            <p>Project 2 stuff over here (Placeholder till I make a project I really really like for software)</p>
+        </template>
+
+    </body>
+</html>

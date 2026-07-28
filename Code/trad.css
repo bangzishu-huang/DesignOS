@@ -301,6 +301,22 @@ html, body {
     transform: translateY(0);
 }
 
+/* project.html specifics */
+.projectDetail {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 40px 80px
+}
+
+.projectDetail h1 {
+    font-size: 42px;
+}
+
+.projectDetail img{
+    max-width: 100%;
+    border-radius: 8px;
+}
+
 #heroEnd {
     position: absolute;
     bottom: 0;
@@ -310,5 +326,10 @@ html, body {
 }
 
 #projects {
+    background: #f1f1f1
+}
+
+#about {
+    min-height: 90vh;
     background: #f1f1f1
 }
