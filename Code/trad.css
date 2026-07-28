@@ -118,7 +118,6 @@ html, body {
 .tabSection {
     display: none;
     padding: 40px;
-    height: 800px
 }
 
 .tabSection.active {
@@ -129,7 +128,7 @@ html, body {
     position: relative;
     height: 135vh;
     background: 
-        linear-gradient(to bottom, rgb(255,255,255,0) 0%, rgba(255,255,255,0) 90%, white 100%),
+        linear-gradient(to bottom, rgb(255,255,255,0) 0%, rgba(255,255,255,0) 90%, #f1f1f1 100%),
         url('./Assets/bg.jpg');
     /* blur image? */
     background-size: cover;
@@ -206,13 +205,100 @@ html, body {
     box-sizing: border-box;
 }
 
+.projectColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.photoColumn {
+    display: flex;
+    gap: 20px
+}
+
 .projectPhoto {
-    width: calc((100% - 80px) / 5);
-    height: 400px;
+    width: 100%;
+    height: 450px;
     object-fit: cover;
+    border-radius: 0px;
+    margin: 0;
+}
+
+.projectPhotoR2 {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 0px;
+    margin: 0;
+}
+
+.projectCard {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
     border-radius: 8px;
-    margin-top: 15px;
-    margin-bottom: 8px;
+    width: calc((100% - 60px) / 4)
+}
+
+.projectCardR2 {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    border-radius: 8px;
+    width: calc((100% - 20px) / 2)
+}
+
+.projectCard .projectPhoto {
+    width: 100%;
+    transition: filter 0.3s ease, transform 0.3s ease
+}
+
+.projectCardR2 .projectPhotoR2 {
+    width: 100%;
+    transition: filter 0.3s ease, transform 0.3s ease
+}
+
+.projectCard:hover .projectPhoto {
+    filter: brightness(0.6);
+    transform: scale(1.02);
+}
+
+.projectCardR2:hover .projectPhotoR2 {
+    filter: brightness(0.6);
+    transform: scale(1.02);
+}
+
+.projectCardOverlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.projectCardName {
+    color: white;
+    font-size: 22px;
+    font-weight: 440;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, transform 0.3s ease
+}
+
+.projectCard:hover .projectCardName {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projectCardR2:hover .projectCardName {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #heroEnd {
@@ -224,5 +310,5 @@ html, body {
 }
 
 #projects {
-    background: white
+    background: #f1f1f1
 }
