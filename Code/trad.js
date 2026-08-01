@@ -10,10 +10,13 @@ const projectsSection = document.getElementById('projects')
 const row2 = document.getElementById('row2')
 
 const fading = document.querySelectorAll('.fadeUp')
-const navTabs = document.querySelectorAll('.navTab')
+const navTabs = document.querySelectorAll('.navTab, .navName')
 const tabSections = document.querySelectorAll('.tabSection')
 const fadeRow1Stuff = document.querySelectorAll('.fadeRow1')
 const fadeRow2Stuff = document.querySelectorAll('.fadeRow2')
+const topItem = document.querySelectorAll('.fadeTop')
+const bottomItem = document.querySelectorAll('.fadeBottom')
+const skillTaggg = document.querySelectorAll('.skillTag')
 
 const heroCTA = document.querySelector('.heroCTA')
 const heroArrow = document.querySelector('.heroArrow')
@@ -30,6 +33,7 @@ navTabs.forEach(tab => {
         // getting rid of the hero section for about
         if (tab.dataset.tab === 'about') {
             heroIntro.style.display = 'none'
+            initAboutFade()
         } else {
             heroIntro.style.display = 'flex'
         }
@@ -210,3 +214,19 @@ window.addEventListener('load', () => {
         }, 200);
     }
 })
+
+// fade for About Section
+function initAboutFade() {
+    topItem.forEach(el => el.classList.remove('visible'))
+    bottomItem.forEach(el => el.classList.remove('visible'))
+    skillTaggg.forEach(el => el.classList.remove('visible'))
+
+    setTimeout(() => {
+        topItem.forEach(el => el.classList.add('visible'))
+    }, 100);
+
+    setTimeout(() => {
+        bottomItem.forEach(el => el.classList.add('visible'))
+        skillTaggg.forEach(el => el.classList.add('visible'))
+    }, 500);
+}
