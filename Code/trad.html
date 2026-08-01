@@ -61,33 +61,33 @@
 
             <section id="projects" class="tabSection active">
                 <!-- Project Grid -->
-                <h1 style="font-size: 35px; margin-top: 20px;">Projects</h1>
-                <h3>UI/UX</h3>
+                <h1 style="font-size: 35px; margin-top: 20px;" class="fadeRow1">Projects</h1>
+                <h3 class="fadeRow1">UI/UX</h3>
                 <div class="projectRow">
 
                     <!-- place holders for the projects -->
-                     <a href="project.html?id=ui-1" class="projectCard">
+                     <a href="project.html?id=ui-1" class="projectCard fadeRow1">
                         <img class="projectPhoto" src="./Assets/placeholder.png">
                         <div class="projectCardOverlay">
                             <span class="projectCardName">Project 1</span>
                         </div>
                      </a>
 
-                     <a href="project.html?id=ui-2" class="projectCard">
+                     <a href="project.html?id=ui-2" class="projectCard fadeRow1">
                         <img class="projectPhoto" src="./Assets/placeholder.png">
                         <div class="projectCardOverlay">
                             <span class="projectCardName">Project 2</span>
                         </div>
                      </a>
                     
-                     <a href="project.html?id=ui-3" class="projectCard">
+                     <a href="project.html?id=ui-3" class="projectCard fadeRow1">
                         <img class="projectPhoto" src="./Assets/placeholder.png">
                         <div class="projectCardOverlay">
                             <span class="projectCardName">Project 3</span>
                         </div>
                      </a>
                     
-                     <a href="project.html?id=ui-4" class="projectCard">
+                     <a href="project.html?id=ui-4" class="projectCard fadeRow1">
                         <img class="projectPhoto" src="./Assets/placeholder.png">
                         <div class="projectCardOverlay">
                             <span class="projectCardName">Project 4</span>
@@ -96,18 +96,18 @@
                     
                 </div>
 
-                <div class="projectRow">
+                <div class="projectRow" id="row2">
                     <div class="projectColumn">
-                        <h3 style="margin-bottom: 0px;">Hardware</h3>
+                        <h3 style="margin-bottom: 0px;" class="fadeRow2">Hardware</h3>
                         <div class="photoColumn">
-                            <a href="project.html?id=hardware-1" class="projectCardR2">
+                            <a href="project.html?id=hardware-1" class="projectCardR2 fadeRow2">
                                 <img class="projectPhotoR2" src="./Assets/placeholder.png">
                                 <div class="projectCardOverlay">
                                     <span class="projectCardName">Hardware 1</span>
                                 </div>
                             </a>
 
-                            <a href="project.html?id=hardware-2" class="projectCardR2">
+                            <a href="project.html?id=hardware-2" class="projectCardR2 fadeRow2">
                                 <img class="projectPhotoR2" src="./Assets/placeholder.png">
                                 <div class="projectCardOverlay">
                                     <span class="projectCardName">Hardware 2</span>
@@ -118,16 +118,16 @@
 
                     </div>
                     <div class="projectColumn">
-                        <h3 style="margin-bottom: 0px;">Software</h3>
+                        <h3 style="margin-bottom: 0px;" class="fadeRow2">Software</h3>
                         <div class="photoColumn">
-                            <a href="project.html?id=software-1" class="projectCardR2">
+                            <a href="project.html?id=software-1" class="projectCardR2 fadeRow2">
                                 <img class="projectPhotoR2" src="./Assets/placeholder.png">
                                 <div class="projectCardOverlay">
                                     <span class="projectCardName">Software 1</span>
                                 </div>
                             </a>
                             
-                            <a href="project.html?id=software-2" class="projectCardR2">
+                            <a href="project.html?id=software-2" class="projectCardR2 fadeRow2">
                                 <img class="projectPhotoR2" src="./Assets/placeholder.png">
                                 <div class="projectCardOverlay">
                                     <span class="projectCardName">Software 2</span>
@@ -141,7 +141,32 @@
             </section>
 
             <section id="about" class="tabSection">
-                <h1 style="font-size: 35px; margin-top: 60px">About Me</h1>
+                <div class="aboutMe">
+
+                    <div class="aboutColumn">
+                        <h1 style="font-size: 35px; margin-top: 60px">About Me</h1>
+                        <div class="notesContent">
+                            <p>I enjoy building and designing things. Sometimes they're an app to help with caregiving, sometimes it may be an eight servo robotdog, and sometimes it could be an entirely fake operating system (OS), just like this portfolio. I built this OS because I felt like using a simple Squarespace template would be lying about who I truly am.</p>
+                            <p>I'm heading to WashU to study design and marketing this fall. I'm excited for what the future holds for me. Just like my initial motivation for DesignOS, I hope I will continue to stay curious and build ideas that seem far-fetched.</p>
+                            <p>Well, this ends my journey making DesignOS. For now, at least. I'm sure I'll be coming back with more projects. </p>
+                            <p>Until next time...</p>
+                            <div class="notesSocials">
+                                <a href="#" id="email" title="Email">
+                                    <img src="./Assets/email.svg" class="notesContact"></a>
+                                <a href="https://www.linkedin.com/in/bangzishu-huang/" target="_blank" title="LinkedIn" >
+                                    <img src="./Assets/linkedin.svg" class="notesContact"></a>
+                                <a href="https://github.com/bangzishu-huang/" target="_blank" title="Github">
+                                <img src="./Assets/github.svg" class="notesContact"></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="aboutColumn">
+                        <img src="./Assets/stasis.png" style=" margin-top: 80px; height: 400px; border-radius: 4px;">
+                        <i style="font-size: 12px; text-align: center; display: block; margin-top: 6px;">Stasis — my first out-of-state hackathon. Coming from NYC, four days in Austin, Texas building a robot dog with my team. This was 6:30am, servos wired up from testing inverse kinematics from last night, no frame built, and my teammate passed out in front of me. One of the most surreal and memorable experiences of my life.</i>
+                    </div>
+
+                </div>
             </section>
         </main>
 

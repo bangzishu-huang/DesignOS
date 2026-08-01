@@ -152,6 +152,17 @@ html, body {
     transform: translateY(0);
 }
 
+.fadeRow1, .fadeRow2 {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:  opacity 1.35s ease, transform 1.35s ease;
+}
+
+.fadeRow1.visible, .fadeRow2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .heroArrow {
     position: fixed;
     bottom: 20px;
@@ -315,6 +326,138 @@ html, body {
 .projectDetail img{
     max-width: 100%;
     border-radius: 8px;
+}
+
+.projectRow {
+    display: flex;
+    gap: 12px;
+}
+
+.projectPhoto {
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.projectPhotoS1 {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.projectPhotoRB {
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+
+.projectDesc {
+    display: block;
+    font-size: 18px;
+}
+
+.projectLiner {
+    margin-top: -10px;
+    display: block;
+    opacity: 0.85;
+}
+
+.projectProgress {
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    object-fit: cover;
+    width: 50%;
+    height: 330px;
+}
+
+.githubButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    text-decoration: none;
+    color: #171717;
+    font-size: 18px;
+    transition: 0.15s ease, background 0.15s ease;
+    height: 50px
+}
+
+.githubButton:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
+}
+
+.projectRow .projectCard:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.projectRow .projectCard:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.projectRow .projectCard:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.projectRow .projectCard:nth-child(4) {
+    transition-delay: 0.45s;
+}
+
+.projectRow .projectCardR2:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.projectRow .projectCardR2:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.projectRow .projectCardR2:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.projectRow .projectCardR2:nth-child(4) {
+    transition-delay: 0.45s;
+}
+
+.notesContact {
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    transition: transform 0.17s ease;
+}
+
+.notesContact:hover {
+    transform: scale(1.1)
+}
+
+.aboutMe {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.aboutColumn {
+    flex: 1;
 }
 
 #heroEnd {

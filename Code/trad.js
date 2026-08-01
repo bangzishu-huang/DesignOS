@@ -1,13 +1,20 @@
 // setting up
 let lastscroll = window.scrollY
 let lastarrowscroll = window.scrollY
+
 const topNav = document.getElementById('topNav')
 const servos = document.getElementById('servos')
 const designBuild = document.getElementById('designBuild')
 const heroEnd = document.getElementById('heroEnd')
+const projectsSection = document.getElementById('projects')
+const row2 = document.getElementById('row2')
+
 const fading = document.querySelectorAll('.fadeUp')
 const navTabs = document.querySelectorAll('.navTab')
 const tabSections = document.querySelectorAll('.tabSection')
+const fadeRow1Stuff = document.querySelectorAll('.fadeRow1')
+const fadeRow2Stuff = document.querySelectorAll('.fadeRow2')
+
 const heroCTA = document.querySelector('.heroCTA')
 const heroArrow = document.querySelector('.heroArrow')
 const heroIntro = document.querySelector('.heroIntro')
@@ -146,5 +153,60 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.navTab[data-tab="about"]').classList.add('active')
         document.getElementById('about').classList.add("active")
         document.querySelector('.heroIntro').style.display = 'none'
+    }
+})
+
+// fading on project row 1
+const row1Observed = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            fadeRow1Stuff.forEach(el => el.classList.add('visible'))
+        } else {
+            fadeRow1Stuff.forEach(el => el.classList.remove('visible'))
+        }
+    })
+}, {
+    threshold: 0.15
+})
+
+row1Observed.observe(projectsSection)
+
+// fading on project row 2
+const row2Observed = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            fadeRow2Stuff.forEach(el => el.classList.add('visible'))
+        } else {
+            fadeRow2Stuff.forEach(el => el.classList.remove('visible'))
+        }
+    })
+}, {
+    threshold: 0.15
+})
+
+row2Observed.observe(row2)
+
+// disabling native scroll restoration
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual'
+}
+
+// saving scroll section
+window.addEventListener('beforeunload', () => {
+    const projectsTop = projectsSection.offsetTop;
+    const reachedProjects = window.scrollY + window.innerHeight * 0.7 >= projectsTop;
+    sessionStorage.setItem('returnToProjects', reachedProjects)
+})
+
+// animating scroll down on reload
+window.addEventListener('load', () => {
+    if (sessionStorage.getItem('returnToProjects') === 'true') {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+            window.scrollTo({
+                top: projectsSection.offsetTop,
+                behavior: "smooth"
+            })
+        }, 200);
     }
 })
