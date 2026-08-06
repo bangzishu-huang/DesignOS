@@ -3,7 +3,32 @@
     background-color: lightgray;
     background-image: url(./Assets/bg.jpg);
     background-size: cover;
-    height: 100vh
+    height: 100vh;
+    font-weight: 320;
+}
+
+.bodyStyle h1 {
+    font-weight: 450;
+}
+
+.bodyStyle h3 {
+    font-weight: 400;
+}
+
+.bodyStyle span {
+    font-weight: 370;
+}
+
+.bodyStyle p {
+    font-weight: 320;
+}
+
+.bodyStyle i {
+    font-weight: 300;
+}
+
+.bodyStyle ul {
+    font-weight: 330;
 }
 
 .intro {

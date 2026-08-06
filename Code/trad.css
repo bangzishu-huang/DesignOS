@@ -4,8 +4,33 @@ html, body {
     overflow-x: hidden;
 }
 
-.bodyStyle{
+.bodyStyle {
     font-family: Lexend;
+    font-weight: 320;
+}
+
+.bodyStyle h1 {
+    font-weight: 450;
+}
+
+.bodyStyle h3 {
+    font-weight: 400;
+}
+
+.bodyStyle span {
+    font-weight: 370;
+}
+
+.bodyStyle p {
+    font-weight: 320;
+}
+
+.bodyStyle i {
+    font-weight: 300;
+}
+
+.bodyStyle ul {
+    font-weight: 330;
 }
 
 .topNav {
@@ -16,7 +41,7 @@ html, body {
     left: 0;
     width: 100%;
     transform: translateY(0);
-    transition: transform 0.25s ease, background-color 0.3s ease;
+    transition: transform 0.25s ease, background-color 0.3s ease, font-weight 0.3s ease;
     z-index: 100;
     padding: 22px;
     box-sizing: border-box;
@@ -46,6 +71,12 @@ html, body {
     cursor: pointer;
     transition: 0.2s ease;
     padding-bottom: 2px;
+    font-weight: 320;
+    transition: font-weight 0.3s ease;
+}
+
+.navTab:hover {
+    font-weight: 440;
 }
 
 .navTab::after {
@@ -116,6 +147,12 @@ html, body {
     white-space: nowrap;
     text-decoration: none;
     padding-bottom: 2px;
+    font-weight: 380;
+    transition: font-weight 0.3s ease 
+}
+
+.navName:hover {
+    font-weight: 500;
 }
 
 .navName::after {
@@ -584,6 +621,27 @@ html, body {
 
 .projectDetail h1 {
     margin-top: -20px;
+}
+
+.projectVideo { 
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 30px;
+    display: block;
+}
+
+.featureCaption {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom:0;
+}
+
+.unselectable {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 #heroEnd {

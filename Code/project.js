@@ -35,3 +35,11 @@ window.addEventListener('scroll', () => {
         ticking = true;
     }
 })
+
+// video mutes for autoplay
+document.querySelectorAll('video[autoplay]').forEach(video => {
+    video.muted = true;
+    video.play().catch(() => {
+
+    })
+});

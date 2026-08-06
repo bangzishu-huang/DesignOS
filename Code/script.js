@@ -212,3 +212,10 @@ initialize(project2)
 initialize(project3)
 initialize(resume)
 initialize(notes)
+
+// video mutes for autoplay
+document.querySelectorAll('video[autoplay]').forEach(video => {
+    video.muted = true;
+    video.play().catch(() => {
+    })
+});
