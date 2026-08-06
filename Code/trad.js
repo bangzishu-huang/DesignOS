@@ -38,7 +38,7 @@ navTabs.forEach(tab => {
             heroIntro.style.display = 'flex'
         }
 
-        window.scrollTo({top: 0, behavior: 'instant'})
+        window.scrollTo({top: 0, behavior: 'smooth'})
     })
 })
 
@@ -157,6 +157,7 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.navTab[data-tab="about"]').classList.add('active')
         document.getElementById('about').classList.add("active")
         document.querySelector('.heroIntro').style.display = 'none'
+        initAboutFade()
     }
 })
 
