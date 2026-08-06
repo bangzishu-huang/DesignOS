@@ -27,14 +27,16 @@ navTabs.forEach(tab => {
     tab.addEventListener('click', () => {
         navTabs.forEach(t => t.classList.remove('active'));
         tabSections.forEach(s => s.classList.remove('active'));
-        tab.classList.add('active');
+        document.querySelectorAll(`[data-tab="${tab.dataset.tab}"]`).forEach(el => el.classList.add('active'));
         document.getElementById(tab.dataset.tab).classList.add('active');
 
         // getting rid of the hero section for about
         if (tab.dataset.tab === 'about') {
+            history.replaceState(null, null, '#about')
             heroIntro.style.display = 'none'
             initAboutFade()
         } else {
+            history.replaceState(null, null, window.location.pathname)
             heroIntro.style.display = 'flex'
         }
 
