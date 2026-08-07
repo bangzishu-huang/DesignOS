@@ -472,6 +472,58 @@ html, body {
     transform: scale(1.02);
 }
 
+.githubButton2 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+    background: rgba(225, 225, 225, 0.753);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    text-decoration: none;
+    color: #171717;
+    font-size: 18px;
+    transition: 0.15s ease, background 0.15s ease;
+    height: 50px
+}
+
+.githubButton2:hover {
+    background: rgb(225, 225, 225);
+    transform: scale(1.02);
+}
+
+.itchButton2 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+    background: rgba(255, 216, 216, 0.753);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    text-decoration: none;
+    color: #171717;
+    font-size: 18px;
+    transition: 0.15s ease, background 0.15s ease;
+    height: 50px
+}
+
+.itchButton2:hover {
+    background: rgb(253, 193, 193);
+    transform: scale(1.02);
+}
+
+.splitButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
 .projectRow .projectCard:nth-child(1) {
     transition-delay: 0s;
 }
@@ -624,6 +676,13 @@ html, body {
 }
 
 .projectVideo { 
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 30px;
+    display: block;
+}
+
+.projectImgFeature { 
     width: 100%;
     border-radius: 8px;
     margin-top: 30px;
