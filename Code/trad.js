@@ -10,7 +10,7 @@ const projectsSection = document.getElementById('projects')
 const row2 = document.getElementById('row2')
 
 const fading = document.querySelectorAll('.fadeUp')
-const navTabs = document.querySelectorAll('.navTab, .navName')
+const navTabs = document.querySelectorAll('.navTab:not(.exit)')
 const tabSections = document.querySelectorAll('.tabSection')
 const fadeRow1Stuff = document.querySelectorAll('.fadeRow1')
 const fadeRow2Stuff = document.querySelectorAll('.fadeRow2')
@@ -18,30 +18,47 @@ const topItem = document.querySelectorAll('.fadeTop')
 const bottomItem = document.querySelectorAll('.fadeBottom')
 const skillTaggg = document.querySelectorAll('.skillTag')
 
+const navName = document.querySelector('.navName')
 const heroCTA = document.querySelector('.heroCTA')
 const heroArrow = document.querySelector('.heroArrow')
 const heroIntro = document.querySelector('.heroIntro')
 
 // matching top bar tabs
 navTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        navTabs.forEach(t => t.classList.remove('active'));
-        tabSections.forEach(s => s.classList.remove('active'));
-        document.querySelectorAll(`[data-tab="${tab.dataset.tab}"]`).forEach(el => el.classList.add('active'));
-        document.getElementById(tab.dataset.tab).classList.add('active');
+    tab.addEventListener('click', (e) => {
+        if (window.location.pathname.includes('trad.html') || window.location.pathname.endsWith('/')) {
+            e.preventDefault()
+        
+            navTabs.forEach(t => t.classList.remove('active'));
+            tabSections.forEach(s => s.classList.remove('active'));
+            tab.classList.add('active');
+            document.getElementById(tab.dataset.tab).classList.add('active');
 
-        // getting rid of the hero section for about
-        if (tab.dataset.tab === 'about') {
-            history.replaceState(null, null, '#about')
-            heroIntro.style.display = 'none'
-            initAboutFade()
-        } else {
-            history.replaceState(null, null, window.location.pathname)
-            heroIntro.style.display = 'flex'
+            if (tab.dataset.tab === 'about') {
+                history.replaceState(null, null, '#about');
+                heroIntro.style.display = 'none'
+                initAboutFade()
+            } else {
+                history.replaceState(null, null, '#');
+                heroIntro.style.display = 'flex'
+            }
         }
 
         window.scrollTo({top: 0, behavior: 'smooth'})
     })
+})
+
+// for the name in top bar
+navName.addEventListener('click', () => {
+    if (window.location.pathname.includes('trad.html') || window.location.pathname.endsWith('/')) {
+        navTabs.forEach(t => t.classList.remove('active'));
+        tabSections.forEach(s => s.classList.remove('active'));
+        document.querySelector('[data-tab="projects"]').classList.add('active');
+        document.getElementById('projects').classList.add('active');
+        heroIntro.style.display = 'flex'
+        history.replaceState(null, null, window.location.pathname);
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    }
 })
 
 // top bar animation
@@ -203,6 +220,11 @@ window.addEventListener('beforeunload', () => {
     const projectsTop = projectsSection.offsetTop;
     const reachedProjects = window.scrollY + window.innerHeight * 0.7 >= projectsTop;
     sessionStorage.setItem('returnToProjects', reachedProjects)
+})
+
+// clearing session storage on exit click
+document.querySelector('.exit').addEventListener('click', () => {
+    sessionStorage.removeItem('returnToProjects')
 })
 
 // animating scroll down on reload

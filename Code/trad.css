@@ -75,7 +75,7 @@ html, body {
     transition: font-weight 0.3s ease;
 }
 
-.navTab:hover {
+.navTab:hover, .navTab.active {
     font-weight: 440;
 }
 
@@ -153,27 +153,6 @@ html, body {
 
 .navName:hover {
     font-weight: 500;
-}
-
-.navName::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.23s ease;
-}
-
-.navName.active::after {
-    transform: scaleX(1);
-}
-
-.navName:hover::after {
-    transform: scaleX(1);
 }
 
 .tabSection {

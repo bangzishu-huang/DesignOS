@@ -400,3 +400,24 @@
     background: rgba(255, 255, 255, 0.5);
     transform: scale(1.02);
 }
+
+.projectVideo { 
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 30px;
+    display: block;
+}
+
+.projectImgFeature { 
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 30px;
+    display: block;
+}
+
+.featureCaption {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom:0;
+}

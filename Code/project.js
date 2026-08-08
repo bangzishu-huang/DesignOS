@@ -10,6 +10,13 @@ const projectDetail = document.querySelector('.projectDetail')
 // error page if project not found
 if (template) {
     container.appendChild(template.content.cloneNode(true))
+    
+    // autoplay fixes
+    container.querySelectorAll('video[autoplay]').forEach(video => {
+        video.muted = true;
+        video.play().catch(() => {
+        });
+    });
 } else {
     container.innerHTML = '<h2> Project not found</h2><p>This project may still be a placeholder.</p>'
 }
@@ -35,11 +42,3 @@ window.addEventListener('scroll', () => {
         ticking = true;
     }
 })
-
-// video mutes for autoplay
-document.querySelectorAll('video[autoplay]').forEach(video => {
-    video.muted = true;
-    video.play().catch(() => {
-
-    })
-});

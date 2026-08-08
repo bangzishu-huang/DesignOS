@@ -164,6 +164,14 @@ document.querySelectorAll('.projectWindow').forEach(win => {
       contentinner.appendChild(template.content.cloneNode(true));
       content.scrollTop = 0;
       contentinner.classList.remove('fading');
+
+      // autoplay fixes
+      content.querySelectorAll('video[autoplay]').forEach(video => {
+        video.muted = true;
+        video.play().catch(() => {
+          // handle error if needed
+        });
+      });
     }, 130);
   }
  
@@ -212,10 +220,3 @@ initialize(project2)
 initialize(project3)
 initialize(resume)
 initialize(notes)
-
-// video mutes for autoplay
-document.querySelectorAll('video[autoplay]').forEach(video => {
-    video.muted = true;
-    video.play().catch(() => {
-    })
-});
