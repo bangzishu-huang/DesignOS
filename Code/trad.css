@@ -376,6 +376,15 @@ html, body {
     border-radius: 8px;
 }
 
+.projectPhotoH1 {
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
 .projectPhotoS1 {
     width: 50%;
     height: 300px;
