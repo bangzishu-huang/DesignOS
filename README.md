@@ -1,8 +1,2 @@
-# DesignOS
-A unique webOS version of my design portfolio I will be making! A twist to the traditional portfolios...
-
-# Tech Slack
-- Frontend: JavaScript, HTML, CSS
-- Hosting: GitHub Pages
-- Version Control: GitHub
-- Development Tools: Visual Studio Code, Live Server Extension
+# Outline
+This branch of the repository serves as an outline for DesignOS for me whenever I am updating or redeveloping any projects for their respective slots. 
