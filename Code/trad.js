@@ -38,13 +38,15 @@ navTabs.forEach(tab => {
                 history.replaceState(null, null, '#about');
                 heroIntro.style.display = 'none'
                 initAboutFade()
+                window.scrollTo({top: 0, behavior: 'smooth'})
             } else {
-                history.replaceState(null, null, '#');
+                history.replaceState(null, null, window.location.pathname);
                 heroIntro.style.display = 'flex'
+                requestAnimationFrame(() => {
+                    window.scrollTo({top: projectsSection.offsetTop, behavior: 'smooth'})
+                })
             }
         }
-
-        window.scrollTo({top: 0, behavior: 'smooth'})
     })
 })
 
@@ -175,8 +177,12 @@ window.addEventListener('DOMContentLoaded', () => {
         tabSections.forEach(s => s.classList.remove('active'))
         document.querySelector('.navTab[data-tab="about"]').classList.add('active')
         document.getElementById('about').classList.add("active")
-        document.querySelector('.heroIntro').style.display = 'none'
+        heroIntro.style.display = 'none'
         initAboutFade()
+    } else if (window.location.hash === '#projects') {
+        setTimeout(() => {
+            window.scrollTo({top: projectsSection.offsetTop, behavior: 'smooth'})
+        }, 200);
     }
 })
 
@@ -255,3 +261,21 @@ function initAboutFade() {
         skillTaggg.forEach(el => el.classList.add('visible'))
     }, 500);
 }
+
+// mail icon
+document.getElementById("email").href = "mailto:" + "bangzishu" + "@" + "gmail.com"
+
+// crossing project section animation
+const heroEndObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            document.body.classList.add('inHero')
+        } else {
+            document.body.classList.remove('inHero')
+        }
+    })
+}, {
+    threshold: 0,
+    rootMargin: '-50% 0px -50% 0px'
+})
+heroEndObserver.observe(heroIntro)

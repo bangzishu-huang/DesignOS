@@ -69,7 +69,6 @@ html, body {
     color: white;
     font-size: 20px;
     cursor: pointer;
-    transition: 0.2s ease;
     padding-bottom: 2px;
     font-weight: 320;
     transition: font-weight 0.3s ease;
@@ -143,7 +142,6 @@ html, body {
     color: white;
     font-size: 25px;
     cursor: pointer;
-    font-weight: 500;
     white-space: nowrap;
     text-decoration: none;
     padding-bottom: 2px;
@@ -270,18 +268,22 @@ html, body {
 
 .projectPhoto {
     width: 100%;
-    height: 450px;
+    height: 380px;
     object-fit: cover;
-    border-radius: 0px;
     margin: 0;
+    border-radius: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .projectPhotoR2 {
     width: 100%;
-    height: 450px;
+    height: 380px;
     object-fit: cover;
-    border-radius: 0px;
     margin: 0;
+    border-radius: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .projectCard {
@@ -290,8 +292,7 @@ html, body {
     text-decoration: none;
     color: inherit;
     overflow: hidden;
-    border-radius: 8px;
-    width: calc((100% - 60px) / 4)
+    width: calc((100% - 60px) / 4);
 }
 
 .projectCardR2 {
@@ -300,8 +301,7 @@ html, body {
     text-decoration: none;
     color: inherit;
     overflow: hidden;
-    border-radius: 8px;
-    width: calc((100% - 20px) / 2)
+    width: calc((100% - 20px) / 2);
 }
 
 .projectCard .projectPhoto {
@@ -311,7 +311,7 @@ html, body {
 
 .projectCardR2 .projectPhotoR2 {
     width: 100%;
-    transition: filter 0.3s ease, transform 0.3s ease
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .projectCard:hover .projectPhoto {
@@ -374,20 +374,6 @@ html, body {
 .projectDetail img{
     max-width: 100%;
     border-radius: 8px;
-}
-
-.projectRow {
-    display: flex;
-    gap: 12px;
-}
-
-.projectPhoto {
-    width: 50%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-top: 15px;
-    margin-bottom: 8px;
 }
 
 .projectPhotoS1 {
@@ -673,6 +659,10 @@ html, body {
     line-height: 1.5;
     margin-top: 10px;
     margin-bottom:0;
+}
+
+body.inHero .navTab.active::after {
+    transform: scaleX(0);
 }
 
 .unselectable {

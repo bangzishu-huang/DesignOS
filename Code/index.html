@@ -117,7 +117,7 @@
             <div class="projectBody">
                 <div class="projectSidebar">
                     <div class="sidebarItem active" data-key="software-1">DesignOS</div>
-                    <div class="sidebarItem" data-key="software-2">Project2</div>
+                    <div class="sidebarItem" data-key="software-2">Narrative Game</div>
                 </div>
                 <div class="projectContent">
                     <div class="projectContentInner"></div>
@@ -150,7 +150,7 @@
             </div>
             <div class="projectBody">
                 <div class="notesContent">
-                    <p>I enjoy building and designing things. Sometimes they're an app to help with caregiving, sometimes it may be an eight servo robotdog, and sometimes it could be an entirely fake operating system (OS), just like this portfolio. I built this OS because I felt like using a simple Squarespace template would be lying about who I truly am.</p>
+                    <p style="margin-top: -4px;">I enjoy building and designing things. Sometimes they're an app to help with caregiving, sometimes it may be an eight servo robotdog, and sometimes it could be an entirely fake operating system (OS), just like this portfolio. I built this OS because I felt like using a simple Squarespace template would be lying about who I truly am.</p>
                     <p>I'm heading to WashU to study design and marketing this fall. I'm excited for what the future holds for me. Just like my initial motivation for DesignOS, I hope I will continue to stay curious and build ideas that seem far-fetched.</p>
                     <p>Well, this ends my journey making DesignOS. For now, at least. I'm sure I'll be coming back with more projects. </p>
                     <p>Until next time...</p>
@@ -162,7 +162,36 @@
                     <a href="https://github.com/bangzishu-huang/" target="_blank" title="Github">
                         <img src="./Assets/github.svg" class="notesContact"></a>
                     </div>
-                    <img src="./Assets/stasis.png" style=" margin-top: 50px; height: 400px; border-radius: 6px;">
+                    <hr style="width: 500px; border: none; height: 3px; background-color: black; margin-top: 30px; border-radius: 50%;" class="fadeBottom">
+                    <div class="aboutMe">
+                        <div class="aboutColumn">
+                            <h3 class="skillCategory">Software</h3>
+                            <div class="skills">
+                                <ul>
+                                    <li>AutoDesk Inventor</li>
+                                    <li>Rhino 8</li>
+                                    <li>Adobe Photoshop</li>
+                                    <li>VS Code</li>
+                                    <li>GitHub</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="aboutColumn">
+                            <h3 class="skillCategory">Skills</h3>
+                            <div class="skills">
+                                <ul>
+                                    <li>3D Modeling and Printing</li>
+                                    <li>Graphic Design</li>
+                                    <li>HTML/CSS/JavaScript</li>
+                                    <li>Python</li>
+                                    <li>Video Editing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src="./Assets/stasis.png" style=" margin-top: 16px; height: 400px; border-radius: 6px;">
                     <i style="font-size: 13px; text-align: center; display: block; margin-top: 6px;">Stasis — my first out-of-state hackathon. Coming from NYC, four days in Austin, Texas building a robot dog with my team. This was 6:30am, servos wired up from testing inverse kinematics from last night, no frame built, and my teammate passed out in front of me. One of the most surreal and memorable experiences of my life.</i>
                 </div>
             </div>
@@ -326,10 +355,66 @@
                 </a>
             </template>
 
-        <template id= "software-2">
-            <h1>Software Project 2</h1>
-            <p>Project 2 stuff over here (Placeholder till I make a project I really really like for software)</p>
-        </template>
+            <template id= "software-2">
+                <h1>Where Stars Used to Sing</h1>
+                <i class="oneLiner">A narrative-driven game exploring the quiet beauty of the world that we tend to forget as we grow older.</i>
+                <div class="projectRow">
+                    <!-- placeholders for now -->
+                    <img src="./Assets/Software2/final1.png" class="projectPhotoS1">
+                    <img src="./Assets/Software2/final2.png" class="projectPhotoS1">
+                </div>
+                <div class="projectDesc">
+                    <p>The idea to create Where Stars Used to Sing came from when I was participating in GMTK 2026, the largest 4 day game jam on itch.io. The theme for the year was "Countdown", and after much brainstorming I wanted to interpret it in an unique sense so I created this narrative-driven game. The entire game essentially explores the concept of time and memory, showing that as we grow older, the world around us becomes more structured and less magical.</p>
+                    <p>After the game jam ended, I found out that the game was rated top 4% for narrative and top 1% for popularity. I was thrilled with this accomplishment, considering I'm still relatively new to game development, so there's much more to learn. Throughout the game, I had to ensure that the narrative elements were well-integrated with the gameplay mechanics.</p>
+                    <p>Since I built the game alone, I was able to learn a lot about game design and storytelling. At the end of the game jam, I did realize that there were still a couple of bugs and movement issues present, showing that I have much more to learn. This was an amazing experience for me and it allowed me to become a way better developer through learning new techniques and recognizing my strengths and weaknesses.</p>
+                </div>
+                <h3 style="margin-bottom: -8px;">Tech Stack</h3>
+                    <ul>
+                        <li>Game Engine: Custom 2D Engine (Vanilla JavaScript)</li>
+                        <li>Frontend: JavaScript, HTML, CSS</li>
+                        <li>Asset Creation: Sprite Fusion</li>
+                        <li>Hosting: Itch.io</li>
+                        <li>Version Control: GitHub</li>
+                        <li>Development Tools: Visual Studio Code, Live Server Extension</li>
+                    </ul>
+                <h3 style="margin-bottom: -5px;">Key Moments</h3>
+                <img src="./Assets/Software2/1.png" class="projectImgFeature">
+                <div class="featureCaption">
+                    <strong>Dialogue System</strong>
+                    <p>The dialogue system was designed to create an immersive storytelling experinece, where random NPCs would be able to interact with the player in meaningful ways. This made the game feel much more alive and engaging for users.</p>
+                </div>
+
+                <img src="./Assets/Software2/2.png" class="projectImgFeature">
+                <div class="featureCaption">
+                    <strong>Pixel Blocking</strong>
+                    <p>The pixel blocking feature was implemented to create a more authentic retro gaming experience, ensuring that sprites and backgrounds interacted properly. I had to ensure that stationary objects such as buildings or trees would not allow the player to walk or phase through them.</p>
+                </div>
+
+                <!-- Placeholder 3 -->
+                <img src="./Assets/Software2/3.png" class="projectImgFeature">
+                <div class="featureCaption">
+                    <strong>Clue Finding</strong>
+                    <p>Throughout the game, I scattered clues in each of the maps where the players would have to focus on the dialogue to uncover. This allowed for a more versatile and engaging gameplay experience, where players can uncover secrets through their careful observations.</p>
+                </div>
+
+                <!-- Placeholder 4 -->
+                <img src="./Assets/Software2/4.png" class="projectImgFeature">
+                <div class="featureCaption">
+                    <strong>Multiple Endings</strong>
+                    <p>Towards the end of the game, players are given the choice to alter the outcome of the entire story based off of their own decision. The choices present reflect the entire journey that the players went through, and it leaves the ultimate fate of the story in the hands of the player. Both endings are designed to leave a lasting impact and allow the player to think about how the game relates to their own lives.</p>
+                </div>
+
+                <div class="splitButton">
+                    <a href="https://github.com/bangzishu-huang/Where-Stars-Used-to-Sing" target="_blank" class="githubButton2">
+                        <img src="./Assets/github.svg" width="30" height="30">
+                        <span>View More Details in GitHub</span>
+                    </a>
+                    <a href="https://bangzishu.itch.io/where-stars-used-to-sing" target="_blank" class="itchButton2">
+                        <img src="./Assets/itchio.svg" width="30" height="30">
+                        <span>Play the Game on Itch.io</span>
+                    </a>
+                </div>
+            </template>
         
     </body>
 </html>

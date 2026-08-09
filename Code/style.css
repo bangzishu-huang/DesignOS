@@ -421,3 +421,83 @@
     margin-top: 10px;
     margin-bottom:0;
 }
+
+.githubButton2 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+    background: rgba(225, 225, 225, 0.753);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    text-decoration: none;
+    color: #171717;
+    font-size: 18px;
+    transition: 0.15s ease, background 0.15s ease;
+    height: 50px
+}
+
+.githubButton2:hover {
+    background: rgb(225, 225, 225);
+    transform: scale(1.02);
+}
+
+.itchButton2 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+    background: rgba(255, 216, 216, 0.753);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    text-decoration: none;
+    color: #171717;
+    font-size: 18px;
+    transition: 0.15s ease, background 0.15s ease;
+    height: 50px
+}
+
+.itchButton2:hover {
+    background: rgb(253, 193, 193);
+    transform: scale(1.02);
+}
+
+.splitButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.aboutMe {
+    width: 950px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.aboutColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 16px;
+}
+
+.skillCategory {
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.skills {
+    margin-top: -5px;
+}

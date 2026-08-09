@@ -60,8 +60,6 @@ const openicon2 = document.querySelector("#icon2")
 const openicon3 = document.querySelector("#icon3")
 const openicon4 = document.querySelector("#icon4")
 const openicon5 = document.querySelector("#icon5")
-const allicons = document.querySelectorAll('.dockIcon .baseIcon')
-
 
 // setting display time
 function updateTime() {
