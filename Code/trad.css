@@ -190,13 +190,13 @@ html, body {
     transform: translateY(0);
 }
 
-.fadeRow1, .fadeRow2 {
+.fadeRow1, .fadeRow2, .fadeRow3 {
     opacity: 0;
     transform: translateY(28px);
     transition:  opacity 1.35s ease, transform 1.35s ease;
 }
 
-.fadeRow1.visible, .fadeRow2.visible {
+.fadeRow1.visible, .fadeRow2.visible, .fadeRow3.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -286,6 +286,16 @@ html, body {
     margin-bottom: 4px;
 }
 
+.projectPhotoR3 {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
 .projectCard {
     position: relative;
     display: block;
@@ -304,6 +314,15 @@ html, body {
     width: calc((100% - 20px) / 2);
 }
 
+.projectCardR3 {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    width: 100%;
+}
+
 .projectCard .projectPhoto {
     width: 100%;
     transition: filter 0.3s ease, transform 0.3s ease
@@ -314,12 +333,22 @@ html, body {
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
+.projectCardR3 .projectPhotoR3 {
+    width: 100%;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
 .projectCard:hover .projectPhoto {
     filter: brightness(0.6);
     transform: scale(1.02);
 }
 
 .projectCardR2:hover .projectPhotoR2 {
+    filter: brightness(0.6);
+    transform: scale(1.02);
+}
+
+.projectCardR3:hover .projectPhotoR3 {
     filter: brightness(0.6);
     transform: scale(1.02);
 }
@@ -348,6 +377,11 @@ html, body {
 }
 
 .projectCardR2:hover .projectCardName {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projectCardR3:hover .projectCardName {
     opacity: 1;
     transform: translateY(0);
 }
@@ -528,6 +562,14 @@ html, body {
 
 .projectRow .projectCardR2:nth-child(4) {
     transition-delay: 0.45s;
+}
+
+.projectRow .projectCardR3:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.projectRow .projectCardR3:nth-child(2) {
+    transition-delay: 0.2s;
 }
 
 .notesContact {

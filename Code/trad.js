@@ -14,6 +14,7 @@ const navTabs = document.querySelectorAll('.navTab:not(.exit)')
 const tabSections = document.querySelectorAll('.tabSection')
 const fadeRow1Stuff = document.querySelectorAll('.fadeRow1')
 const fadeRow2Stuff = document.querySelectorAll('.fadeRow2')
+const fadeRow3Stuff = document.querySelectorAll('.fadeRow3')
 const topItem = document.querySelectorAll('.fadeTop')
 const bottomItem = document.querySelectorAll('.fadeBottom')
 const skillTaggg = document.querySelectorAll('.skillTag')
@@ -215,6 +216,21 @@ const row2Observed = new IntersectionObserver((entries) => {
 })
 
 row2Observed.observe(row2)
+
+// fading on project row 3
+const row3Observed = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            fadeRow3Stuff.forEach(el => el.classList.add('visible'))
+        } else {
+            fadeRow3Stuff.forEach(el => el.classList.remove('visible'))
+        }
+    })
+}, {
+    threshold: 0.15
+})
+
+row3Observed.observe(row3)
 
 // disabling native scroll restoration
 if ('scrollRestoration' in history) {
