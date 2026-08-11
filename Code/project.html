@@ -87,14 +87,28 @@
                     <li>Jumper Wires</li>
                     <li>Light Switch</li>
                 </ul>
-                <h3 style="margin-bottom: -5px;">Progress Photos</h3>
-                <div class="projectRow">
-                    <img src="./Assets/Hardware1/1.jpeg" class="projectProgress" style="object-position: center -380px;">
-                    <img src="./Assets/Hardware1/2.jpeg" class="projectProgress" style="object-position: center -450px;">
+                <h3 style="margin-bottom: -5px;">Design Process</h3>
+                <img src="./Assets/Hardware1/1.jpeg" class="projectImgFeature" style="object-position: center -650px;">
+                <div class="featureCaption">
+                    <strong>Diagnostic Testing</strong>
+                    <p>Before we started building the robot dog, we conducted diagnostic testing to ensure all components were functioning correctly. We also used this time to start coding and pushing our firmware to the servo motors (that had legs already attached so we could work on inverse kinematics).</p>
                 </div>
-                <div class="projectRow">
-                    <img src="./Assets/Hardware1/3.jpeg" class="projectProgress" style="object-position: 0px -200px;">
-                    <img src="./Assets/Hardware1/4.jpeg" class="projectProgress" style="object-position: center -160px;">
+                <img src="./Assets/Hardware1/2.jpeg" class="projectImgFeature" style="object-position: center -780px;">
+                <div class="featureCaption">
+                    <strong>Initial Assembly</strong>
+                    <p>Once all components were tested, we began the assembly process. This involved carefully connecting each part and ensuring everything was aligned properly. We were optimizing more to get the basic functions working instead of trying to have an extensive approach on wire and build management.</p>
+                </div>
+                <img src="./Assets/Hardware1/3.jpeg" class="projectImgFeature" style="object-position: 0px -380px;">
+                <div class="featureCaption">
+                    <strong>Frame Reassembly</strong>
+                    <p>After a couple of test runs, we had to reassemble certain parts to improve performance and address any issues that arose. Especially with the servo motors and ensuring that they were melted into the 3D printed legs in order to maximize grip. We also began to test the ultrasonic sensor for obstacle detection.</p>
+                </div>
+                <div class="projectVidWrap">
+                    <video src="./Assets/Hardware1/demovid.mp4" class="projectVidFeature" controls></video>
+                </div>
+                <div class="featureCaption">
+                    <strong>Final Product</strong>
+                    <p>After more extensive testing and the implementation of the ultrasonic sensor addition, we were finally able to get the robot dog to freely move around. We attached a 5V portable battery at the bottom of the frame in order for it to roam autonmously.</p>
                 </div>
                 <a href="https://github.com/bangzishu-huang/Connection-Executor-9600X" target="_blank" class="githubButton">
                     <img src="./Assets/github.svg" width="30" height="30">
@@ -127,13 +141,25 @@
                     <li>DC Barrel Jack to Screen Adapter</li>
                 </ul>
                 <h3 style="margin-bottom: -5px;">Progress Photos</h3>
-                <div class="projectRow">
-                    <img src="./Assets/Hardware2/1.jpeg" class="projectProgress" style="object-position: -100px center;">
-                    <img src="./Assets/Hardware2/2.jpeg" class="projectProgress">
+                <img src="./Assets/Hardware2/1.jpeg" class="projectImgFeature">
+                <div class="featureCaption">
+                    <strong>Gear System</strong>
+                    <p>Before starting on the overall design of the robot arm, I decided to make an unique set of rotational gears that would be implemented all throughout the joints. Through this system, whenever the servo motor is moving the robot arm wouldn't have a very violent motion, instead it would maintain a slow and steady pace.</p>
                 </div>
-                <div class="projectRow">
-                    <img src="./Assets/Hardware2/3.jpeg" class="projectProgress">
-                    <img src="./Assets/Hardware2/4.jpeg" class="projectProgress">
+                <img src="./Assets/Hardware2/2.jpeg" class="projectImgFeature">
+                <div class="featureCaption">
+                    <strong>Joint Assembly</strong>
+                    <p>After finishing the design for the holders of the servo motor for the joints of the robot arm, I moved everything into an assembly file in order to see how everything attaches. This was just a rough measurement for the entire arm, so I knew how to scale the base and got the first looks of a completed project.</p>
+                </div>
+                <img src="./Assets/Hardware2/3.jpeg" class="projectImgFeature">
+                <div class="featureCaption">
+                    <strong>Final Debugging</strong>
+                    <p>After pretty much finishing the design for the entire robotic arm, I had to check for all the interferences that would occur and debug them as they would prevent the arm from functioning properly. At this point, I was just going back and forth editing the parts to ensure there were no interference present.</p>
+                </div>
+                <img src="./Assets/Hardware2/4.jpeg" class="projectImgFeature">
+                <div class="featureCaption">
+                    <strong>Initial Testing</strong>
+                    <p>After 3D printing out all the seperate parts I had to connect them one by one in order to ensure there weren't any misalignment during the printing process. If there were any mistakes either I would reprint the same file or tweak the part and reprint it again. I also started testing all the electronic components in order to ensure it worked well with the firmware.</p>
                 </div>
                 <a href="https://github.com/bangzishu-huang/Roboarm" target="_blank" class="githubButton">
                     <img src="./Assets/github.svg" width="30" height="30">
@@ -142,13 +168,13 @@
             </template>
 
             <!-- Prototype Projects -->
-             <template id="prototype-1">
+            <template id="prototype-1">
                 <h1>Squirrel Plex</h1>
-             </template>
+            </template>
 
-             <template id="prototype-2">
+            <template id="prototype-2">
                 <h1>Sylform Light</h1>
-             </template>
+            </template>
 
 
             <!-- Software Projects -->
