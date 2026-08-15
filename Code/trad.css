@@ -13,6 +13,10 @@ html, body {
     font-weight: 450;
 }
 
+.bodyStyle h2 {
+    font-weight: 430;
+}
+
 .bodyStyle h3 {
     font-weight: 400;
 }
@@ -321,6 +325,7 @@ html, body {
     color: inherit;
     overflow: hidden;
     width: 100%;
+    transition: border-radius 0.2s ease;
 }
 
 .projectCard .projectPhoto {
@@ -351,6 +356,10 @@ html, body {
 .projectCardR3:hover .projectPhotoR3 {
     filter: brightness(0.6);
     transform: scale(1.02);
+}
+
+.projectCardR3:hover {
+    border-radius: 4px;
 }
 
 .projectCardOverlay {
@@ -417,6 +426,15 @@ html, body {
     border-radius: 8px;
     margin-top: 15px;
     margin-bottom: 8px;
+}
+
+.projectPhotoC2 {
+    width: 50%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 8px; 
 }
 
 .projectPhotoS1 {
@@ -705,6 +723,67 @@ html, body {
     border-radius: 8px;
     margin-top: 30px;
     display: block;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 490px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.carouselTrack {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carouselSlide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.carouselSlide.active {
+    opacity: 1;
+}
+
+.carouselBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.4s ease, background 0.4 ease;
+}
+
+.carousel:hover .carouselBtn {
+    opacity: 1;
+}
+
+.carouselBtn:hover {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.carouselBtn.prev {
+    left: 12px;
+}
+
+.carouselBtn.next {
+    right: 12px;
 }
 
 .projectVidWrap {

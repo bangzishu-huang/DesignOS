@@ -17,6 +17,7 @@ if (template) {
         video.play().catch(() => {
         });
     });
+    container.querySelectorAll('.carousel').forEach(initCarousel)
 } else {
     container.innerHTML = '<h2> Project not found</h2><p>This project may still be a placeholder.</p>'
 }
@@ -42,3 +43,45 @@ window.addEventListener('scroll', () => {
         ticking = true;
     }
 })
+
+// carousel 
+function initCarousel(carouselE1) {
+    const prevBtn = carouselE1.querySelector('.prev')
+    const nextBtn = carouselE1.querySelector('.next')
+    const slides = carouselE1.querySelectorAll('.carouselSlide')
+
+    let current = 0
+    let autoTimer = null
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'))
+        current = (index + slides.length) % slides.length
+        slides[current].classList.add('active')
+    }
+
+    function startAuto() {
+        autoTimer = setInterval(() => showSlide(current + 1), 2000)
+    }
+
+    function stopAuto() {
+        clearInterval(autoTimer)
+    }
+
+    nextBtn.addEventListener('click', () => {
+        showSlide(current + 1)
+        stopAuto()
+        startAuto()
+    })
+
+    prevBtn.addEventListener('click', () => {
+        showSlide(current - 1)
+        stopAuto()
+        startAuto()
+    })
+
+    carouselE1.addEventListener('mouseenter', stopAuto)
+    carouselE1.addEventListener('mouseleave', startAuto)
+
+    startAuto()
+}
+
