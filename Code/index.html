@@ -38,46 +38,46 @@
 
             <!-- Icons -->
             <div id="icon1" class="dockIcon">
-                <img src="./Assets/ui.svg" width="50" height="50" class="baseIcon"/>
-                <p style="margin-top: 4px">UX/UI</p>
+                <img src="./Assets/concepts.svg" width="50" height="50" class="baseIcon" style="opacity: 0.65;"/>
+                <p style="margin-top: 4px; color: rgba(215, 215, 215, 0.75); font-weight: bolder;">Concepts</p>
             </div>
             
             <div id="icon2" class="dockIcon">
                 <img src="./Assets/hardware.svg" width="50" height="50" class="baseIcon"/>
-                <p style="margin-top: 4px;">Hardware</p>
+                <p style="margin-top: 4px; color: rgba(215, 215, 215, 0.75); font-weight: bolder;;">Physical</p>
             </div>
             <div id="icon3" class="dockIcon">
                 <img src="./Assets/software.svg" width="50" height="50" class="baseIcon"/>
-                <p style="margin-top: 4px">Software</p>
+                <p style="margin-top: 4px; color: rgba(215, 215, 215, 0.75); font-weight: bolder;">Software</p>
             </div>
             
             <div id="icon4" class="dockIcon">
                 <img src="./Assets/resume.svg" width="50" height="50" class="baseIcon"/>
-                <p style="margin-top: 4px;">Resume</p>
+                <p style="margin-top: 4px; color: rgba(215, 215, 215, 0.75); font-weight: bolder;">Resume</p>
             </div>
                   
             <div id="icon5" class="dockIcon">
                 <img src="./Assets/notes.svg" width="50" height="50" class="baseIcon"/>
-                <p style="margin-top: 4px;">Notes</p>
+                <p style="margin-top: 4px; color: rgba(215, 215, 215, 0.75); font-weight: bolder;">Notes</p>
             </div>
 
         </div>
 
 
-        <!-- UX/UI Window -->
+        <!-- Concepts Window -->
         <div id="project1" class="projectWindow" style="display: none;">
             <div id="project1header" class="projectTitleBar">
-                <span class="projectTitle">UX/UI</span>
+                <span class="projectTitle">Conceptual Projects</span>
                 <div class="projectControls">
                     <span class="closeButton"></span>
                 </div>
             </div>
             <div class="projectBody">
                 <div class="projectSidebar">
-                    <div class="sidebarItem active" data-key="ui-1">Project1</div>
-                    <div class="sidebarItem" data-key="ui-2">Project2</div>
-                    <div class="sidebarItem" data-key="ui-3">Project3</div>
-                    <div class="sidebarItem" data-key="ui-4">Project4</div>
+                    <div class="sidebarItem active" data-key="ui-1">ResQ Capsule</div>
+                    <div class="sidebarItem" data-key="ui-2">FlexiBowl</div>
+                    <div class="sidebarItem" data-key="ui-3">Arborspira</div>
+                    <div class="sidebarItem" data-key="ui-4">Fluid-S</div>
                 </div>
                 <div class="projectContent">
                     <div class="projectContentInner"></div>
@@ -86,18 +86,22 @@
         </div>
 
 
-        <!-- Hardware Window -->
+        <!-- Physical Window -->
         <div id="project2" class="projectWindow" style="display: none;">
             <div id="project2header" class="projectTitleBar">
-                <span class="projectTitle">Hardware</span>
+                <span class="projectTitle">Physical Projects</span>
                 <div class="projectControls">
                     <span class="closeButton"></span>
                 </div>
             </div>
             <div class="projectBody">
                 <div class="projectSidebar">
+                    <p style="font-size: 14px; margin-top: -2px; margin-left: 8px;">Hardware</p>
                     <div class="sidebarItem active" data-key="hardware-1">Robot Dog</div>
                     <div class="sidebarItem" data-key="hardware-2">Robot Arm</div>
+                    <p style="font-size: 14px; margin-top: 18px; margin-left: 8px;">Prototypes</p>
+                    <div class="sidebarItem" data-key="hardware-3">Squirrel Plex</div>
+                    <div class="sidebarItem" data-key="hardware-4">Sylform Light</div>
                 </div>
                 <div class="projectContent">
                     <div class="projectContentInner"></div>
@@ -109,7 +113,7 @@
         <!-- Software Window -->
         <div id="project3" class="projectWindow" style="display: none;">
             <div id="project3header" class="projectTitleBar">
-                <span class="projectTitle">Software</span>
+                <span class="projectTitle">Software Projects</span>
                 <div class="projectControls">
                     <span class="closeButton"></span>
                 </div>
@@ -151,7 +155,7 @@
             <div class="projectBody">
                 <div class="notesContent">
                     <p style="margin-top: -4px;">I enjoy building and designing things. Sometimes they're an app to help with caregiving, sometimes it may be an eight servo robotdog, and sometimes it could be an entirely fake operating system (OS), just like this portfolio. I built this OS because I felt like using a simple Squarespace template would be lying about who I truly am.</p>
-                    <p>I'm heading to WashU to study design and marketing this fall. I'm excited for what the future holds for me. Just like my initial motivation for DesignOS, I hope I will continue to stay curious and build ideas that seem far-fetched.</p>
+                    <p>I'm currently a first year at WashU studying design and marketing this fall. I'm excited for what the future holds for me. Just like my initial motivation for DesignOS, I hope I will continue to stay curious and build ideas that seem far-fetched.</p>
                     <p>Well, this ends my journey making DesignOS. For now, at least. I'm sure I'll be coming back with more projects. </p>
                     <p>Until next time...</p>
                     <div class="notesSocials">
@@ -199,34 +203,33 @@
     
 
         <!-- UI/UX Projects -->
-        <template id= "concept-1">
-            <h1>UI/UX Project 1</h1>
-            <p>Project 1 stuff over here (Placeholder till college)</p>
+        <template id= "ui-1">
+            
         </template>
 
-        <template id= "concept-2">
-            <h1>UI/UX Project 2</h1>
+        <template id= "ui-2">
+            <h1>Concepts Project 2</h1>
             <p>Project 2 stuff over here (Placeholder till college)</p>
         </template>
 
-        <template id= "concept-3">
-            <h1>UI/UX Project 3</h1>
+        <template id= "ui-3">
+            <h1>Concepts Project 3</h1>
             <p>Project 3 stuff over here (Placeholder till college)</p>
         </template>
 
-        <template id= "concept-4">
-            <h1>UI/UX Project 4</h1>
+        <template id= "ui-4">
+            <h1>Concepts Project 4</h1>
             <p>Project 4 stuff over here (Placeholder till college)</p>
         </template>
 
 
-        <!-- Hardware Projects -->
+        <!-- Physical Projects -->
         <template id= "hardware-1">
-            <h1>Connection Executor 9600X (Robot Dog)</h1>
+            <h1>Connection Executor 9600X (RobotDog)</h1>
             <i class="projectLiner">A 9-servo robot dog that can roam around autonomously, utilizing an ultrasonic sensor to avoid obstacles.</i>
             <div class="projectRow">
-                <img src="./Assets/Hardware1/final1.jpeg" class="projectPhoto">
-                <img src="./Assets/Hardware1/final2.jpeg" class="projectPhoto">
+                <img src="./Assets/Hardware1/final1.jpeg" class="projectPhotoH1">
+                <img src="./Assets/Hardware1/final2.jpeg" class="projectPhotoH1">
             </div>
             <div class="projectDesc">
                 <p>This was a project built for a 4 day hardware hackathon called "Stasis". It features a robotdog that uses 8 servo motors and inverse kinematics in order to replicate 4-legged movement. Another servo motor is attached to an ultrasonic sensor to act as the head for the robodog and detect incoming obstacles. A light switch (for the special ingredient) is present in the back of the robot to act as a quick on/off switch. There are 2 separate modes for the robot dog, one that you can manually control movement through the console, and another one where the robot dog will walk autonomously.</p>
@@ -245,14 +248,30 @@
                 <li>Jumper Wires</li>
                 <li>Light Switch</li>
             </ul>
-            <h3 style="margin-bottom: -5px;">Progress Photos</h3>
-            <div class="projectRow">
-                <img src="./Assets/Hardware1/1.jpeg" class="projectProgress" style="object-position: center -380px;">
-                <img src="./Assets/Hardware1/2.jpeg" class="projectProgress" style="object-position: center -450px;">
+            <h3 style="margin-bottom: -5px;">Design Process</h3>
+            <img src="./Assets/Hardware1/1.jpeg" class="projectImgFeature" style="object-position: center -800px;">
+            <div class="featureCaption">
+                <strong>Diagnostic Testing</strong>
+                <p>Before we started building the robot dog, we conducted diagnostic testing to ensure all components were functioning correctly. We also used this time to start coding and pushing our firmware to the servo motors (that had legs already attached so we could work on inverse kinematics).</p>
             </div>
-            <div class="projectRow">
-                <img src="./Assets/Hardware1/3.jpeg" class="projectProgress" style="object-position: 0px -200px;">
-                <img src="./Assets/Hardware1/4.jpeg" class="projectProgress" style="object-position: center -160px;">
+            <div class="projectImgWrap">
+                <img src="./Assets/Hardware1/2.jpeg" class="projectImgFeatureP1">
+            </div>
+            <div class="featureCaption">
+                <strong>Initial Assembly</strong>
+                <p>Once all components were tested, we began the assembly process. This involved carefully connecting each part and ensuring everything was aligned properly. We were optimizing more to get the basic functions working instead of trying to have an extensive approach on wire and build management.</p>
+            </div>
+            <img src="./Assets/Hardware1/3.jpeg" class="projectImgFeature" style="object-position: 0px -380px;">
+            <div class="featureCaption">
+                <strong>Frame Reassembly</strong>
+                <p>After a couple of test runs, we had to reassemble certain parts to improve performance and address any issues that arose. Especially with the servo motors and ensuring that they were melted into the 3D printed legs in order to maximize grip. We also began to test the ultrasonic sensor for obstacle detection.</p>
+            </div>
+            <div class="projectVidWrap">
+                <video src="./Assets/Hardware1/demovid.mp4" class="projectVidFeature" controls></video>
+            </div>
+            <div class="featureCaption">
+                <strong>Final Product</strong>
+                <p>After more extensive testing and the implementation of the ultrasonic sensor addition, we were finally able to get the robot dog to freely move around. We attached a 5V portable battery at the bottom of the frame in order for it to roam autonmously.</p>
             </div>
             <a href="https://github.com/bangzishu-huang/Connection-Executor-9600X" target="_blank" class="githubButton">
                 <img src="./Assets/github.svg" width="30" height="30">
@@ -265,8 +284,8 @@
             <h1>RoboArm</h1>
             <i class="projectLiner">A 2 jointed robot arm that is able to be controlled wireless through a smartphone.</i>
             <div class="projectRow">
-                <img src="./Assets/Hardware2/final1.jpeg" class="projectPhotoRB" style="object-position: center -130px;">
-                <img src="./Assets/Hardware2/final2.jpeg" class="projectPhotoRB" style="object-position: center -90px;">
+                <img src="./Assets/Hardware2/final1.jpeg" class="projectPhotoRB" style="object-position: center -70px;">
+                <img src="./Assets/Hardware2/final2.jpeg" class="projectPhotoRB" style="object-position: center -60px;">
             </div>
             <div class="projectDesc">
                 <p>RoboArm is a robotic arm that has 2 movable joints, a base that is capable of horizontal movement, and a gripper that's able to open and close. The design for RoboArm, including the gears, are all custom made and 3D printed by me on AutoDesk Inventor. There are small cuts and indents in order to help with wiring space throughout the design.</p>
@@ -285,18 +304,123 @@
                 <li>DC Barrel Jack to Screen Adapter</li>
             </ul>
             <h3 style="margin-bottom: -5px;">Progress Photos</h3>
-            <div class="projectRow">
-                <img src="./Assets/Hardware2/1.jpeg" class="projectProgress" style="object-position: -100px center;">
-                <img src="./Assets/Hardware2/2.jpeg" class="projectProgress">
+            <img src="./Assets/Hardware2/1.jpeg" class="projectImgFeature">
+            <div class="featureCaption">
+                <strong>Gear System</strong>
+                <p>Before starting on the overall design of the robot arm, I decided to make an unique set of rotational gears that would be implemented all throughout the joints. Through this system, whenever the servo motor is moving the robot arm wouldn't have a very violent motion, instead it would maintain a slow and steady pace.</p>
             </div>
-            <div class="projectRow">
-                <img src="./Assets/Hardware2/3.jpeg" class="projectProgress">
-                <img src="./Assets/Hardware2/4.jpeg" class="projectProgress">
+            <img src="./Assets/Hardware2/2.jpeg" class="projectImgFeature">
+            <div class="featureCaption">
+                <strong>Joint Assembly</strong>
+                <p>After finishing the design for the holders of the servo motor for the joints of the robot arm, I moved everything into an assembly file in order to see how everything attaches. This was just a rough measurement for the entire arm, so I knew how to scale the base and got the first looks of a completed project.</p>
+            </div>
+            <img src="./Assets/Hardware2/3.jpeg" class="projectImgFeature">
+            <div class="featureCaption">
+                <strong>Final Debugging</strong>
+                <p>After pretty much finishing the design for the entire robotic arm, I had to check for all the interferences that would occur and debug them as they would prevent the arm from functioning properly. At this point, I was just going back and forth editing the parts to ensure there were no interference present.</p>
+            </div>
+            <img src="./Assets/Hardware2/4.jpeg" class="projectImgFeature">
+            <div class="featureCaption">
+                <strong>Initial Testing</strong>
+                <p>After 3D printing out all the seperate parts I had to connect them one by one in order to ensure there weren't any misalignment during the printing process. If there were any mistakes either I would reprint the same file or tweak the part and reprint it again. I also started testing all the electronic components in order to ensure it worked well with the firmware.</p>
             </div>
             <a href="https://github.com/bangzishu-huang/Roboarm" target="_blank" class="githubButton">
                 <img src="./Assets/github.svg" width="30" height="30">
                 <span>View More Details in GitHub</span>
             </a>
+        </template>
+
+        <template id="hardware-3">
+            <h1>Squirrel Plex</h1>
+            <i class="oneLiner">A squirrel house designed to maximize comfortable living space while shielding squirrels from harsh environments.</i>
+            <div class="projectRow">
+                <img src="./Assets/Prototype1/final1.jpeg" class="projectPhotoRB">
+                <img src="./Assets/Prototype1/final2.jpeg" class="projectPhotoRB" style="object-position: center -150px">
+            </div>
+            <div class="projectDesc">
+                <p>Squirrel Plex is basically a squirrel house that was inspired by modern apartment buildings, hence the two story build. The overall goal of it is to give squirrels access to essentially shelter whether it's during bad weather or for normal sleeping. It's made specifically for squirrels so they are able to utilize it however they want without the intervention of any devices, through a buckel strap mechanism that holds Squirrel Plex onto a tree trunch securely.</p>
+                <p>My initial idea was to make a simple birdhouse but after seeing the vast amounts of birdhouses around the neighborhood, I started to brainstorm what other animals would be able to stay in a shelter. Then, that's when it hit me and I decided to make some sort of house designed just for squirrels because you rarely see that type of house anywhere, so I thought out to try to design one.</p>
+                <p>This project it taught me a lot about physical product design, as I started out with an idea and tried to implement it into cardboard. It was very hands-on, which I really loved, but it took a large amount of time to build the concept and ensuring for example the demensions of the wall were cut correctly.</p>
+            </div>
+            <h3 style="margin-bottom: -8px;">Materials Used</h3>
+            <ul>
+                <li>Cardboard</li>
+                <li>Foamcore</li>
+                <li>Gatorboard</li>
+                <li>Foam</li>
+                <li>Buckle Strap</li>
+            </ul>
+            <h3 style="margin-bottom: -5px;">Project Views</h3>
+            <div class="carousel" id="conceptCarousel">
+                <div class="projectImgWrap">
+                    <div class="carouselTrack">
+                        <img src="./Assets/Prototype1/1.1.png" class="projectImgFeatureP1 carouselSlide active">
+                        <img src="./Assets/Prototype1/1.2.png" class="projectImgFeatureP1 carouselSlide">
+                        <img src="./Assets/Prototype1/1.3.png" class="projectImgFeatureP1 carouselSlide">
+                    </div>
+                </div>
+                <button class="carouselBtn prev" aria-label="Previous Slide">&#10094;</button>
+                <button class="carouselBtn next" aria-label="Next Slide">&#10095;</button>
+            </div> 
+            <div class="featureCaption"> 
+                <strong>Inital Ideas</strong>
+                <p>These 3 cardboard designs where my initial ideas for what I wanted my squirrel house to look like. They were essentially quick ideas that I built pretty fast in order to get a sense of how everything would look. The ideas being made into a physical setting really helped me visualize the flaws and highlights of each design, which really helped me to narrow down my best piece.</p>
+            </div>
+            <div class="projectImgWrap">
+                <!-- fix bottom -->
+                <img src="./Assets/Prototype1/2.jpeg" class="projectImgFeatureP1" style="object-position: center -20px;">
+            </div>
+            <div class="featureCaption">
+                <strong>Final Design</strong>
+                <p>So after deciding which one of the 3 cardboard inital design I wanted to go with, I used a mix of sturdy materials, like gatorboard and foamcore, in order to buid out the design. I used those specific materials since they promoted sturdy surfaces that were still versatile when slightly cut to form curves.</p>
+            </div>
+            <div class="projectImgWrap">
+                <img src="./Assets/Prototype1/3.jpeg" class="projectImgFeatureP1">
+            </div>
+            <div class="featureCaption">
+                <strong>Nature Implementation</strong>
+                <p>After finishing the build for the final design, I decided to test it out by actually attaching it onto a tree trunk in a local park. Suprisingly, it was very sturdy and Squirrel Plex stayed up right like it's supposed to be, so I was very happy with the outcome.</p>
+            </div>
+        </template>
+
+        <template id="hardware-4">
+            <h1>Sylform Light</h1>
+            <i class="oneLiner">A nature-inspired light that is designed to feel modern and sleek.</i>
+            <div class="projectRow">
+                <img src="./Assets/Prototype2/final1.jpeg" class="projectPhotoS1">
+                <img src="./Assets/Prototype2/final2.png" class="projectPhotoS1">
+            </div>
+            <div class="projectDesc">
+                <p>This is a light that was orginally inspired by the complex but patterned designs branches seemed to give off in nature. This light tries to replicate that along with tweaking the exterior of the light in order to feel modern and fit into today's sleek design feel.</p>
+                <p>I always looked upon the natural world around us as inspiration or just ideas for design and I got the idea to make this sort of light when I was running through a local park in the morning. The branches and the sun aligned in a way it gave a really unique shadow on the floor but still managed to brighten up the path, and ever since then I tried to recreate a similar feeling.</p>
+                <p>For the individual cardboard panels of the light I made them through Adobe Illustrator and had them cut out through a Zund Cutter. It was my first time really doing an assembly design where the panels would be made by a machine so it was a new experience for me. I also learned a lot about lighting design through this project, and it introduced to me a whole new field of design.</p>
+            </div>
+            <h3 style="margin-bottom: -8px;">Materials Used</h3>
+            <ul>
+                <li>Vellum Paper</li>
+                <li>Cardboard</li>
+                <li>Light Bulb</li>
+            </ul>
+            <h3 style="margin-bottom: -5px;">Project Views</h3>
+            <div class="projectImgWrap">
+                <img src="./Assets/Prototype2/1.jpeg" class="projectImgFeatureP1">
+            </div>
+            <div class="featureCaption">
+                <strong>Panel Sketches</strong>
+                <p>Before I settled on a single design for the light, I tried to brainstorm by sketching a bunch of different shaped panels that I may have wanted. This helped me to start visualizing how they would look when composed all around.</p>
+            </div>
+            <img src="./Assets/Prototype2/2.png" class="projectImgFeatureP1">
+            <div class="featureCaption">
+                <strong>Software Design</strong>
+                <p>After I found my most favorite sketch of a panel, I worked on implementing it onto Adobe Illustrator so than I could export it as a .svg file and print it using a Zund Cutter. On Illustrator I had to make sure that I set everything correctly where I would be able to attach the light all around and also design holes for the light bulb to go through.</p>
+            </div>
+            <div class="projectImgWrap">
+                <img src="./Assets/Prototype2/final1.jpeg" class="projectImgFeatureP1">
+            </div>
+            <div class="featureCaption">
+                <strong>Final Product</strong>
+                <p>After waiting to get all the cardboard pieces to be cut out I was finally able to attach everything together and make it work. At first, I didn't use any vellum paper but I wanted to basically let the light glow more vibrant so I used it to give off that certian effect.</p>
+            </div>
         </template>
 
 
