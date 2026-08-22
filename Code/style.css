@@ -614,3 +614,12 @@
     align-items: center;
     background: rgba(225, 225, 225, 0.753)
 }
+
+.projectPhotoC2 {
+    width: 50%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 8px; 
+}
