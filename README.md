@@ -5,7 +5,7 @@ This idea originally sprouted when I was looking at other people's design portfo
 
 Throughout the process of designing this OS, I had to learn a lot from the coding languages. Some notable complex parts were learning how to implement z-indexing and also make the windows on the OS part draggable. There were lots of iterations of the initial versions of the portfolio in order to figure out what projects to include and the placement of a lot of objects. This was a huge learning experience for me, as I was able to develop my technical skills further, even through the process of debugging (which took really long).
 
-AI Used: None
+AI Used: Claude to speed up debugging processes
 
 # Tech Slack
 - Frontend: JavaScript, HTML, CSS
