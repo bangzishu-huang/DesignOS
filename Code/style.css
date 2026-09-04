@@ -237,7 +237,7 @@
     padding: 24px;
     overflow-y: auto;
     overflow-x: hidden;
-    background: rgba(255, 255, 255, 0.348);
+    background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(7px);
     transition: opacity 0.15s ease;
 }
